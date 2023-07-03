@@ -1,0 +1,25 @@
+.sidebarParent {
+  width: 252px;
+  border-right: 2px solid #f1f1f1;
+  height: 100vh;
+}
+.logo {
+  padding: 49px 0px;
+  border-bottom: 2px solid #f1f1f1;
+  width: 100%;
+}
+.logoImg {
+  width: 140.18px;
+  height: 30.94px;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 750px) {
+  .sidebarParent {
+    position: fixed;
+    top: auto;
+    left: 0%;
+    z-index: 1;
+  }
+}
