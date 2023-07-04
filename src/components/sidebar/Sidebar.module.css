@@ -1,5 +1,5 @@
 .sidebarParent {
-  width: 252px;
+  width: 100%;
   border-right: 2px solid #f1f1f1;
   height: 100vh;
 }
@@ -18,7 +18,7 @@
 @media (max-width: 750px) {
   .sidebarParent {
     position: fixed;
-    top: auto;
+    top: 0%;
     left: 0%;
     z-index: 1;
   }

@@ -5,7 +5,7 @@
 }
 
 .sidebar {
-  width: 252px;
+  width: 17.5%;
 }
 .welcome {
   display: flex;
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  width: 82.5%;
 }
 .welcome + img {
   width: 29rem;
@@ -29,6 +30,30 @@
   line-height: normal;
 }
 
+@media (max-width: 1350px) {
+  .sidebar {
+    width: 20%;
+  }
+  .welcome {
+    width: 80%;
+  }
+}
+@media (max-width: 1250px) {
+  .sidebar {
+    width: 25%;
+  }
+  .welcome {
+    width: 75%;
+  }
+}
+@media (max-width: 950px) {
+  .sidebar {
+    width: 30%;
+  }
+  .welcome {
+    width: 70%;
+  }
+}
 @media (max-width: 750px) {
   .sidebar {
     position: fixed;
