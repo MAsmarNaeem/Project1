@@ -80,7 +80,7 @@
   margin-left: 18px;
 }
 .tableParent2 {
-  width:490px;
+  width: 490px;
   height: 620px;
   margin: auto;
   margin-top: 13px;
@@ -88,20 +88,20 @@
 }
 
 /* .tableParent::-webkit-scrollbar {
-  width: 1089px;
-  height: 26px;
-  flex-shrink: 0;
-
-  border-radius: 20px;
-  background: #d9d9d9;
-}
-.tableParent:-webkit-scrollbar-thumb {
-  width: 597px !important;
-  height: 14px !important;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #8b8b8b !important;
-} */
+    width: 1089px;
+    height: 26px;
+    flex-shrink: 0;
+  
+    border-radius: 20px;
+    background: #d9d9d9;
+  }
+  .tableParent:-webkit-scrollbar-thumb {
+    width: 597px !important;
+    height: 14px !important;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #8b8b8b !important;
+  } */
 
 .table {
   width: 100%;
@@ -238,20 +238,20 @@
 .tablebody > td:nth-child(9) {
   width: 130px;
 }
-.tablebody > td:nth-child(9) button , .downloadD{
-  color: #EE6A5F;
-font-size: 14px;
-font-family: Poppins;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 86px;
-height: 31px;
-flex-shrink: 0;
-border-radius: 8px;
-border: 1px solid #EE6A5F;
-background: #FFF;
-
+.tablebody > td:nth-child(9) button,
+.downloadD {
+  color: #ee6a5f;
+  font-size: 14px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 86px;
+  height: 31px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #ee6a5f;
+  background: #fff;
 }
 .next {
   display: flex;
