@@ -9,6 +9,7 @@ import AddTrainer from './pages/addTrainer/AddTrainer';
 import AddTraining from './pages/addTraining/AddTraining';
 import YearlyPlan from './pages/yearlyPlan/YearlyPlan';
 import Trainings from './pages/trainings/Training';
+import Monthly from './pages/monthly/Monthly';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/addtrainings" element={<AddTraining />} />
         <Route path="/trainings" element={<Trainings />} />
         <Route path="/yearlyplan" element={<YearlyPlan />} />
+        <Route path="/monthly" element={<Monthly />} />
       </Routes>
     </div>
   );

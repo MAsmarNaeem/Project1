@@ -1,4 +1,4 @@
-import style from './YearlyPlan.module.css'
+import style from './Monthly.module.css'
 import SideBar from '../../components/sidebar/SideBar'
 import profileImg from '../../assets/images/hrprofile/Dropdown.svg'
 import circularuser from '../../assets/images/hrprofile/UserCircle.svg'
@@ -7,7 +7,7 @@ import { useState } from 'react'
 import hrStyle from '../HRProfile/HRProfile.module.css'
 import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
-function YearlyPlan() {
+function Monthly() {
     const [isOpen, setIsOpen] = useState(false)
     const toggler = () => {
         if (isOpen) {
@@ -16,16 +16,16 @@ function YearlyPlan() {
             setIsOpen(true)
         }
     }
-    let data = [
-        '2023',
-        '2023',
-        '2023',
-        '2023',
-        '2023',
-        '2023',
-        '2023',
-        '2023',
-    ]
+    const data = [
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+    ];
     let next = 'Next page >>'
     return (
         <div className={style.parent}>
@@ -62,15 +62,15 @@ function YearlyPlan() {
                 <div className={style.tableParent2}>
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Year</td>
+                            <td>Month</td>
                             <td>Action</td>
                         </tr>
                         {
-                            data.map((year, i) => {
+                            data.map((month, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
                                         <td>
-                                            <p>{year}</p>
+                                            <p>{month}</p>
                                         </td>
                                         <td ><button className={style.view}>
                                             View
@@ -92,4 +92,4 @@ function YearlyPlan() {
     )
 }
 
-export default YearlyPlan
+export default Monthly
