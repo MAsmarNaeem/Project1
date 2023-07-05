@@ -1,54 +1,24 @@
 import SideBar from '../../components/sidebar/SideBar'
-import style2 from '../HRProfile/HRProfile.module.css'
 import style from './AddEmployees.module.css'
-import profileImg from '../../assets/images/hrprofile/Dropdown.svg'
-import circularuser from '../../assets/images/hrprofile/UserCircle.svg'
-import logout from '../../assets/images/hrprofile/Logout.svg'
-import { useState } from 'react'
 import edit from '../../assets/images/addEmployee/edit.svg'
 import profile from '../../assets/images/addEmployee/prof.svg'
 import mail from '../../assets/images/hrprofile/mail.svg'
 import Phone from '../../assets/images/employeeProfile/Phone.svg'
 import copyp from '../../assets/images/employeeProfile/CopyP.svg'
 import Location from '../../assets/images/employeeProfile/Location.svg'
-import Office from '../../assets/images/employeeProfile/Office.svg'
 import UserCard from '../../assets/images/employeeProfile/UserCard.svg'
-import Calendar from '../../assets/images/employeeProfile/Calendar.svg'
 import arrow from '../../assets/images/addEmployee/arrow.svg'
 import man from '../../assets/images/hrprofile/man.svg'
+import ProfileUser from '../../components/profileUser/ProfileUser'
 
 function AddEmployees() {
-    const [isOpen, setIsOpen] = useState(false)
-    const toggler = () => {
-        if (isOpen) {
-            setIsOpen(false)
-        } else {
-            setIsOpen(true)
-        }
-    }
-    let info = '>'
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
                 <SideBar />
             </div>
             <div className={style.addEmployee}>
-                <div className={style2.userInfo}>
-                    <img src={profileImg} onClick={toggler} alt="" />
-                    {
-                        isOpen ?
-                            <div className={style2.dropdown}>
-                                <div>
-                                    <img src={circularuser} alt="" />
-                                    <p>Profile</p>
-                                </div>
-                                <div>
-                                    <img src={logout} alt="" />
-                                    <p>Logout</p>
-                                </div>
-                            </div> : null
-                    }
-                </div>
+                <ProfileUser />
                 <div className={style.form}>
                     <div className={style.headers}>
                         <div className={style.spans}>

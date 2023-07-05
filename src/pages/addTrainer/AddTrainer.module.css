@@ -158,7 +158,7 @@ background: #FAFAFA;
     width: 25%;
   }
   .form {
-    width: 75%;
+    width: 65%;
   }
 }
 @media (max-width: 950px) {
@@ -166,6 +166,16 @@ background: #FAFAFA;
     width: 30%;
   }
   .form {
-    width: 70%;
+    width: 65%;
+  }
+}
+@media (max-width: 750px) {
+  .sidebar {
+    width: 0%;
+  }
+  .form {
+    width: 90%;
+    margin-top: 275px;
+    margin-bottom: 95px;
   }
 }

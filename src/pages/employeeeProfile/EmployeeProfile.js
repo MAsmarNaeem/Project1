@@ -9,47 +9,21 @@ import Office from '../../assets/images/employeeProfile/Office.svg'
 import UserCard from '../../assets/images/employeeProfile/UserCard.svg'
 import Calendar from '../../assets/images/employeeProfile/Calendar.svg'
 import man from '../../assets/images/hrprofile/man.svg'
-import profileImg from '../../assets/images/hrprofile/Dropdown.svg'
-import circularuser from '../../assets/images/hrprofile/UserCircle.svg'
-import logout from '../../assets/images/hrprofile/Logout.svg'
 import { useState } from 'react'
 import style from '../HRProfile/HRProfile.module.css'
 import style2 from './EmployeeProfile.module.css'
+import ProfileUser from '../../components/profileUser/ProfileUser'
 
 
 function EmployeeProfile() {
     const [data, setdata] = useState(['IT', 'IT', 'IT'])
-
-    const [isOpen, setIsOpen] = useState(false)
-    const toggler = () => {
-        if (isOpen) {
-            setIsOpen(false)
-        } else {
-            setIsOpen(true)
-        }
-    }
     return (
         <div className={style.parent}>
             <div className={`${style.sidebar}`}>
                 <SideBar />
             </div>
             <div className={style.profile}>
-                <div className={style.userInfo}>
-                    <img src={profileImg} onClick={toggler} alt="" />
-                    {
-                        isOpen ?
-                            <div className={style.dropdown}>
-                                <div>
-                                    <img src={circularuser} alt="" />
-                                    <p>Profile</p>
-                                </div>
-                                <div>
-                                    <img src={logout} alt="" />
-                                    <p>Logout</p>
-                                </div>
-                            </div> : null
-                    }
-                </div>
+                <ProfileUser />
                 <p>Employee Profile</p>
                 <div className={style.hrInfo}>
                     <div>

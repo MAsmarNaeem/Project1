@@ -125,3 +125,10 @@
   height: 1.9375rem;
   flex-shrink: 0;
 }
+
+@media (max-width: 750px) {
+  .dropdown {
+    background-color: #fafafa;
+    margin: 0;
+  }
+}

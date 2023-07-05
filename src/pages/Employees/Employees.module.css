@@ -105,6 +105,8 @@
 
 .table {
   width: 100%;
+  position: relative;
+  z-index: 0;
 }
 .headers {
   display: flex;
@@ -299,5 +301,16 @@ background: #FFF;
   }
   .subparent {
     width: 70%;
+  }
+}
+@media (max-width: 750px) {
+  .sidebar {
+    width: 0%;
+  }
+  .subparent {
+    width: 100%;
+  }
+  .searchbar {
+    margin-top: 200px;
   }
 }

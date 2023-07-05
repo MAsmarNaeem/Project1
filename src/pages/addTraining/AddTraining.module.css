@@ -112,7 +112,6 @@
   flex-wrap: wrap;
   padding-right: 0 !important;
   gap: 1rem;
-
 }
 
 .btns button:nth-child(1) {
@@ -143,6 +142,17 @@
   background: #ee6a5f;
   border: 0;
 }
+.btns > button:nth-child(2):hover {
+  color: #ee6a5f;
+transition: 0.3s;
+border: 1px solid #ee6a5f;
+  background: #fff;
+}
+.btns > button:nth-child(1):hover {
+transition: 0.3s;
+background: #ee6a5f;
+  color: #fff;
+}
 
 @media (max-width: 1350px) {
   .sidebar {
@@ -158,7 +168,7 @@
     width: 25%;
   }
   .form {
-    width: 75%;
+    width: 65%;
   }
 }
 @media (max-width: 950px) {
@@ -166,6 +176,18 @@
     width: 30%;
   }
   .form {
-    width: 70%;
+    width: 65%;
+  }
+}
+@media (max-width: 750px) {
+  .sidebar {
+    width: 0%;
+  }
+  .form {
+    width: 90%;
+    margin-top: 275px;
+  }
+  .sec1 {
+    width: 90%;
   }
 }

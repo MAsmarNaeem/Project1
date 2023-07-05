@@ -3,20 +3,10 @@
   width: 100%;
 }
 
-.userInfo {
-  display: flex;
-  justify-content: flex-end;
-}
-.userInfo > img {
-  position: absolute;
-  right: 3.25rem;
-  cursor: pointer;
-  top: 1.44rem;
-}
 
 .hrInfo {
   width: 95%;
-  margin-left: 1.56rem;
+  margin: auto;
   position: relative;
 }
 
@@ -105,6 +95,14 @@
     width: 70%;
   }
 }
+@media (max-width: 750px) {
+  .sidebar {
+    width: 0% !important;
+  }
+  .profile {
+    width: 100%;
+  }
+}
 .hrInfo > div:nth-child(2) > p:nth-child(1) {
   color: #3d3d3d;
   font-size: 1.75rem;
@@ -155,7 +153,6 @@ p {
 
 .card1 {
   width: 42%;
-  margin-left: 1.5rem;
   margin-top: 1.19rem;
   border-radius: 0.4375rem;
   border: 1px solid #dadada;
@@ -243,11 +240,9 @@ p {
 
 .card2 {
   width: 42%;
-  margin-left: 1.5rem;
   margin-top: 1.19rem;
   border-radius: 0.4375rem;
   border: 1px solid #dadada;
-  background: #fbfbfb;
 }
 
 .card2headers {
@@ -256,6 +251,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background: #fbfbfb;
 }
 .card2headers p:nth-child(1) {
   color: #000;
@@ -337,12 +333,20 @@ p {
   font-weight: 500;
   line-height: normal;
   border: 0;
+  z-index: 2;
+}
+.card2body > button:nth-child(3):hover {
+  background: #fff;
+  color: #ee6a5f;
+  border: 1px solid #ee6a5f;
+  transition: 0.3s;
 }
 
 .cardParent {
   display: flex;
+  width: 95%;
   justify-content: space-between;
-  margin-right: 2.9rem;
+  margin: auto;
   margin-bottom: 1.31rem;
 }
 
@@ -359,10 +363,15 @@ p {
 }
 @media (max-width: 1150px) {
   .card1 {
-    width: 90%;
+    width: 99%;
+    margin-top: 9px !important;
+    margin: auto;
   }
   .card2 {
-    width: 90%;
+    width: 99%;
+    margin-top: 9px !important;
+    margin: auto;
+    padding-bottom: 1rem;
   }
   .cardParent {
     margin-right: 1rem;
@@ -370,34 +379,37 @@ p {
   }
 }
 
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  justify-content: center;
-  align-items: flex-start;
-  top: 4rem;
-  right: 0.1rem;
-  width: 136px;
-  height: 76px;
-  flex-shrink: 0;
-  border-radius: 5px;
-  border: 1px solid #e3e3e3;
-  background: #fff;
-  gap: 1rem;
+@media (min-width: 1250px) {
+  .card1 {
+    width: 44% !important;
+  }
+  .card2 {
+    width: 44% !important;
+    padding-bottom: 1rem;
+  }
 }
-.dropdown > div {
-  display: flex;
-  gap: 10px;
-  margin-left: 10px;
+@media (min-width: 1150px) {
+  .card1 {
+    width: 47%;
+  }
+  .card2 {
+    width: 47%;
+    padding-bottom: 1rem;
+  }
 }
-.dropdown > div > p{
-  color: #7F7F7F;
-text-align: center;
-font-size: 14px;
-font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-cursor: pointer;
+
+@media (max-width: 600px) {
+  .hrInfo > div:nth-child(2) {
+    flex-direction: column;
+    height: 15.4375rem !important;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hrInfo p {
+    margin-left: 0 !important;
+  }
+  .card2headers img:nth-child(2) {
+    width: 10rem;
+  }
 }

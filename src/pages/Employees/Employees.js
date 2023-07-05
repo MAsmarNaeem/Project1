@@ -1,24 +1,12 @@
 import SideBar from '../../components/sidebar/SideBar'
 import style from './Employees.module.css'
-import profileImg from '../../assets/images/hrprofile/Dropdown.svg'
-import circularuser from '../../assets/images/hrprofile/UserCircle.svg'
-import logout from '../../assets/images/hrprofile/Logout.svg'
-import { useState } from 'react'
-import hrStyle from '../HRProfile/HRProfile.module.css'
 import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import avatar from '../../assets/images/employees/Avatar.png'
+import ProfileUser from '../../components/profileUser/ProfileUser'
 
 
 function Employees() {
-    const [isOpen, setIsOpen] = useState(false)
-    const toggler = () => {
-        if (isOpen) {
-            setIsOpen(false)
-        } else {
-            setIsOpen(true)
-        }
-    }
     let data = [
         {
             img: avatar,
@@ -108,22 +96,7 @@ function Employees() {
                 <SideBar />
             </div>
             <div className={style.subparent}>
-                <div className={hrStyle.userInfo}>
-                    <img src={profileImg} onClick={toggler} alt="" />
-                    {
-                        isOpen ?
-                            <div className={hrStyle.dropdown}>
-                                <div>
-                                    <img src={circularuser} alt="" />
-                                    <p>Profile</p>
-                                </div>
-                                <div>
-                                    <img src={logout} alt="" />
-                                    <p>Logout</p>
-                                </div>
-                            </div> : null
-                    }
-                </div>
+              <ProfileUser />
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />

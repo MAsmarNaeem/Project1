@@ -1,48 +1,23 @@
 import SideBar from '../../components/sidebar/SideBar'
 import style from './HRProfile.module.css'
-import profileImg from '../../assets/images/hrprofile/Dropdown.svg'
 import user from '../../assets/images/hrprofile/user.svg'
 import selectImg from '../../assets/images/hrprofile/selectImg.svg'
 import larr from '../../assets/images/hrprofile/larr.svg'
 import lock from '../../assets/images/hrprofile/lock.svg'
 import mail from '../../assets/images/hrprofile/mail.svg'
 import man from '../../assets/images/hrprofile/man.svg'
-import circularuser from '../../assets/images/hrprofile/UserCircle.svg'
-import logout from '../../assets/images/hrprofile/Logout.svg'
-import { useState } from 'react'
+import ProfileUser from '../../components/profileUser/ProfileUser'
 
 
 function HRProfile() {
-    const [isOpen, setIsOpen] = useState(false)
-    const toggler = () => {
-        if (isOpen) {
-            setIsOpen(false)
-        } else {
-            setIsOpen(true)
-        }
-    }
+
     return (
         <div className={style.parent}>
             <div className={`${style.sidebar}`}>
                 <SideBar />
             </div>
             <div className={style.profile}>
-                <div className={style.userInfo}>
-                    <img src={profileImg} onClick={toggler} alt="" />
-                    {
-                        isOpen ?
-                            <div className={style.dropdown}>
-                                <div>
-                                    <img src={circularuser} alt="" />
-                                    <p>Profile</p>
-                                </div>
-                                <div>
-                                    <img src={logout} alt="" />
-                                    <p>Logout</p>
-                                </div>
-                            </div> : null
-                    }
-                </div>
+                <ProfileUser />
                 <p>HR Profile</p>
                 <div className={style.hrInfo}>
                     <div>

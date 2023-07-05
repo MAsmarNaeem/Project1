@@ -1,7 +1,5 @@
 .card1 {
-  width: 48.5%;
-  margin-left: 1.5rem;
-  margin-top: 1.19rem;
+  width: 49%;
   border: 1px solid #dadada;
   border-radius: 0.4375rem;
   padding-bottom: 100px;
@@ -62,6 +60,14 @@
   display: flex;
   border-radius: 0.4375rem;
 }
+@media (max-width: 475px) {
+  .card1body {
+    flex-direction: column;
+  }
+  .card1body > div:nth-child(2){
+    margin-top: 3rem;
+  }
+}
 .card1body > div {
   padding-left: 1.63rem;
   background: #fff;
@@ -100,9 +106,7 @@
 }
 
 .card2 {
-  width: 46%;
-  margin-left: 1.5rem;
-  margin-top: 1.19rem;
+  width: 48%;
   border-radius: 0.4375rem;
   display: flex;
   flex-direction: column;
@@ -268,10 +272,12 @@
 }
 
 .cardParent {
+  width: 95%;
   display: flex;
   justify-content: space-between;
-  margin-right: 2.9rem;
+  margin: auto;
   margin-bottom: 1.31rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 1250px) {
@@ -281,19 +287,16 @@
   .card2 {
     width: 50%;
   }
-  .cardParent {
-    margin-right: 1rem;
-  }
 }
 @media (max-width: 1150px) {
   .card1 {
-    width: 90%;
+    width: 100%;
   }
   .card2 {
-    width: 90%;
+    width: 100%;
+    margin-top: 1.5rem;
   }
   .cardParent {
-    margin-right: 1rem;
     flex-direction: column;
   }
 }
@@ -380,3 +383,15 @@
   line-height: normal;
   background:#FFF;
 }
+
+  .btns > button:nth-child(1):hover {
+    color: #ee6a5f;
+  transition: 0.3s;
+  border: 1px solid #ee6a5f;
+    background: #fff;
+  }
+  .btns > button:nth-child(2):hover {
+  transition: 0.3s;
+  background: #ee6a5f;
+    color: #fff;
+  }

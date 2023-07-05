@@ -8,31 +8,29 @@
 .addEmployee {
   width: 82.5%;
   margin-bottom: 1rem;
-  
 }
 
 .form {
   width: 100%;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 95px;
 }
 
 .headers {
   display: flex;
-  width:90%;
+  width: 90%;
   height: 68px;
   align-items: center;
   gap: 37px;
   margin: auto;
   padding-left: 32px;
   border-radius: 10px 10px 0px 0px;
- background: #ee6a5f; 
+  background: #ee6a5f;
 }
 .spans {
   display: flex;
   gap: 5px;
 }
-
 
 .spans > span {
   display: block;
@@ -88,7 +86,7 @@
 }
 
 .userform {
-    margin: auto;
+  margin: auto;
   border-radius: 0px 0px 10px 10px;
   background: #fafafa;
   display: flex;
@@ -162,13 +160,13 @@
   height: 5px;
 }
 .btns {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-right: 0 !important;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 0 !important;
+  gap: 1rem;
 }
 
 .btns button:nth-child(1) {
@@ -177,13 +175,19 @@
   flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #ee6a5f;
-  color: #ee6a5f;
   font-size: 17px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #ee6a5f;
   background: #fff;
+}
+
+@media (max-width: 950px) {
+  .btns button:nth-child(1) {
+    width: 100%;
+  }
 }
 .btns button:nth-child(2) {
   width: 156px;
@@ -198,6 +202,15 @@
   border-radius: 10px;
   background: #ee6a5f;
   border: 0;
+}
+.btns button:nth-child(1):hover {
+  background: #ee6a5f;
+  color: #fff;
+}
+.btns button:nth-child(2):hover {
+  border: 1px solid #ee6a5f;
+  background:#fff ;
+  color: #ee6a5f;
 }
 @media (max-width: 1350px) {
   .sidebar {
@@ -221,5 +234,38 @@
   }
   .addEmployee {
     width: 70%;
+  }
+}
+@media (max-width: 750px) {
+  .sidebar {
+    width: 0%;
+  }
+  .addEmployee {
+    width: 100%;
+  }
+  .form {
+margin-top: 240px;
+  }
+
+}
+@media (max-width: 550px) {
+  .userform {
+    flex-direction: column;
+  }
+  .sec1 {
+    width: 90%;
+    margin: auto;
+    padding-bottom:0px;
+  }
+  .sec1 > div {
+    width: 100%;
+  }
+  .sec2 {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 65px;
+  }
+  .sec2 > div {
+    width: 100%;
   }
 }
