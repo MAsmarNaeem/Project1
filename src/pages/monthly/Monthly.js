@@ -29,7 +29,7 @@ function Monthly() {
                     </div>
                     <div className={style.sec2}>
                         <img src={add} alt="" />
-                        <p>Add Employee</p>
+                        <p>Add New</p>
                     </div>
                 </div>
                 <div className={style.tableParent2}>

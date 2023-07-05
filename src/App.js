@@ -10,6 +10,8 @@ import AddTraining from './pages/addTraining/AddTraining';
 import YearlyPlan from './pages/yearlyPlan/YearlyPlan';
 import Trainings from './pages/trainings/Training';
 import Monthly from './pages/monthly/Monthly';
+import Checked from './pages/weeks/Checked';
+import Input from './pages/weeks/Input';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/trainings" element={<Trainings />} />
         <Route path="/yearlyplan" element={<YearlyPlan />} />
         <Route path="/monthly" element={<Monthly />} />
+        <Route path="/weekly1" element={<Checked />} />
+        <Route path="/weekly2" element={<Input />} />
       </Routes>
     </div>
   );

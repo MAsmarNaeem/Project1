@@ -53,7 +53,7 @@
 .sec2 {
   border-radius: 8px;
   border: 1px solid #2b5ce6;
-  width: 154px;
+  width: 127px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -176,7 +176,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 71px;
+  margin-top: 25px;
   margin-right: 31px;
   margin-bottom: 28px;
 }
