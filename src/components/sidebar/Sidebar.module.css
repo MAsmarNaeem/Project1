@@ -20,6 +20,7 @@
 
 @media (max-width: 750px) {
   .sidebarParent {
+    width: 100% !important;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -36,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     background: #fafafa;
+   
   }
   .offcanvas {
     width: 70%;
@@ -46,6 +48,7 @@
     transition: 0.5s;
     position: relative;
     right: 70%;
+
   }
   .block {
     transition: 0.5s;
@@ -73,11 +76,5 @@
 @media (max-width: 950px) {
   .sidebarParent {
     width: 30%;
-  }
-}
-@media (max-width: 750px) {
-  .sidebarParent {
-    width: 100%;
-    z-index: 1;
   }
 }

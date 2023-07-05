@@ -46,10 +46,10 @@
     .parent > img {
         top: 9rem;
         right: 1rem;
-        z-index: 3;
+        z-index: 2;
     }
     .dropdown {
-        z-index: 3;
+        z-index: 2;
         top: 11.5rem;
     }
 }

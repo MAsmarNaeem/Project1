@@ -112,6 +112,7 @@ background: #FAFAFA;
   flex-wrap: wrap;
   padding-right: 0 !important;
   gap: 1rem;
+  background: #fafafa !important;
 }
 
 .btns button:nth-child(1) {
