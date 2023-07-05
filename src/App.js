@@ -12,6 +12,7 @@ import Trainings from './pages/trainings/Training';
 import Monthly from './pages/monthly/Monthly';
 import Checked from './pages/weeks/Checked';
 import Input from './pages/weeks/Input';
+import AddPlan from './pages/monthly/AddPlan';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/monthly" element={<Monthly />} />
         <Route path="/weekly1" element={<Checked />} />
         <Route path="/weekly2" element={<Input />} />
+        <Route path="/addmonthlyplan" element={<AddPlan />} />
       </Routes>
     </div>
   );
