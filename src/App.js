@@ -18,6 +18,8 @@ import AddPerson from './pages/personalRec/AddPerson';
 import ViewTrainings from './pages/infoSec/ViewTrainings';
 import ViewTrainings2 from './pages/infoSec/ViewTrainings2';
 import Main from './pages/viewTraings/Main';
+import ComputTraining from './pages/viewTraings/ComputTraining';
+import AprovementTable from './pages/personalRec/AprovementTable';
 
 function App() {
   return (
@@ -59,6 +61,10 @@ function App() {
         <Route path="/viewtrainings2" element={<ViewTrainings2 />} />
         {/* 18 */}
         <Route path="/viewtrainingslist" element={<Main />} />
+        {/* 19 */}
+        <Route path="/computertainings" element={<ComputTraining />} />
+        {/* 20 */}
+        <Route path="/aprovementtable" element={<AprovementTable />} />
       </Routes>
     </div>
   );
