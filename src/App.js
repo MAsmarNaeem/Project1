@@ -13,6 +13,11 @@ import Monthly from './pages/monthly/Monthly';
 import Checked from './pages/weeks/Checked';
 import Input from './pages/weeks/Input';
 import AddPlan from './pages/monthly/AddPlan';
+import PersonalRec from './pages/personalRec/PersonalRec';
+import AddPerson from './pages/personalRec/AddPerson';
+import ViewTrainings from './pages/infoSec/ViewTrainings';
+import ViewTrainings2 from './pages/infoSec/ViewTrainings2';
+import Main from './pages/viewTraings/Main';
 
 function App() {
   return (
@@ -26,11 +31,16 @@ function App() {
         <Route path="/addtrainer" element={<AddTrainer />} />
         <Route path="/addtrainings" element={<AddTraining />} />
         <Route path="/trainings" element={<Trainings />} />
-        <Route path="/yearlyplan" element={<YearlyPlan />} />
+        <Route path="/yearly" element={<YearlyPlan />} />
         <Route path="/monthly" element={<Monthly />} />
         <Route path="/weekly1" element={<Checked />} />
         <Route path="/weekly2" element={<Input />} />
         <Route path="/addmonthlyplan" element={<AddPlan />} />
+        <Route path="/addpersonalrec" element={<PersonalRec />} />
+        <Route path="/addperson" element={<AddPerson />} />
+        <Route path="/viewtrainings" element={<ViewTrainings />} />
+        <Route path="/viewtrainings2" element={<ViewTrainings2 />} />
+        <Route path="/viewtrainingslist" element={<Main />} />
       </Routes>
     </div>
   );

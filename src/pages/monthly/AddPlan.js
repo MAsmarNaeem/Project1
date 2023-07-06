@@ -54,9 +54,7 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) 9:00 AM to 6:00 PM' />
-                                <div className={style.indicator}>
-                                    
-                                </div>
+                               
                             </div>
                         </div>
                         <div className={style.inputParent}>
@@ -93,11 +91,7 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) Training Hall' />
-                                <div className={style.indicator}>
-                                    <div>
-                                        <img src={arrow} alt="" />
-                                    </div>
-                                </div>
+                            
                             </div>
                         </div>
                         <div className={style.inputParent}>
@@ -106,25 +100,21 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) 2 Days' />
-                                <div className={style.indicator}>
-                                    <div>
-                                        <img src={arrow} alt="" />
-                                    </div>
-                                </div>
+                              
                             </div>
                         </div>
-                        <div className={`${style.inputParent} ${style.bg}`}>
+                        <div className={`${style.checkinputParent} ${style.bg}`}>
                             <div className={style.para}>
                                 <p>Internal/External</p>
                             </div>
-                            <div>
+                            <div className={style.dropdown}>
                                 <div className='d-flex justify-content-between align-items-center gap-2' >
                                     <input style={{width:'26px' , height:'36px'}} type="radio" />
                                     <p className={style.paraind}>Internal</p>
                                 </div>
-                                <div className='d-flex justify-content-between align-items-center w-50 gap-2'>
+                                <div className='bg-#FFF d-flex justify-content-between align-items-center w-50 gap-2'>
                                     <p className={style.paraind}>External</p>
-                                    <img src={arrow} alt="" />
+                                    <img className='cursor-pointer' src={arrow} alt="" />
                                 </div>
                             </div>
                         </div>
