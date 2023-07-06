@@ -1,9 +1,9 @@
 import SideBar from '../../components/sidebar/SideBar'
 import style from './Main.module.css'
 import search from '../../assets/images/employees/Search.svg'
-import add from '../../assets/images/employees/Application Add.svg'
 import avatar from '../../assets/images/employees/Avatar.png'
 import ProfileUser from '../../components/profileUser/ProfileUser'
+import Switch from '../../components/switch/Switch'
 
 
 function Main() {
@@ -16,7 +16,9 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Not Trained'
+            status: 'pending',
+            marks: 36
+
         },
         {
             img: avatar,
@@ -26,7 +28,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: false,
+            attendence: false,
+            marks: 36
         },
         {
             img: avatar,
@@ -36,7 +41,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: true,
+            attendence: true,
+            marks: 45
         },
         {
             img: avatar,
@@ -46,7 +54,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: false,
+            attendence: false,
+            marks: 55
         },
         {
             img: avatar,
@@ -56,7 +67,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: false,
+            attendence: false,
+            marks: 66
         },
         {
             img: avatar,
@@ -66,7 +80,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: true,
+            attendence: true,
+            marks: 44
         },
         {
             img: avatar,
@@ -76,7 +93,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: true,
+            attendence: true,
+            marks: 556
         },
         {
             img: avatar,
@@ -86,7 +106,10 @@ function Main() {
             phonen: '0306-56302121',
             email: 'Emetowinner@gmail.com',
             dep: 'Manufacture',
-            status: 'Manufacture'
+            status: 'Emetowinner@gmail.com',
+            pass: true,
+            attendence: true,
+            marks: 64
         }
     ]
     let next = 'Next page >>'
@@ -125,21 +148,18 @@ function Main() {
                                         <td>
                                             <p>{employee.code}</p>
                                         </td>
-                                        <td><img src={employee.img} alt="" /> {employee.name}</td>
+                                        <td className={style.name}><img src={employee.img} alt="" /> {employee.name}</td>
                                         <td>{employee.cnic}</td>
                                         <td>{employee.phonen}</td>
                                         <td>{employee.email}</td>
-                                        <td>{employee.dep}</td>
                                         <td>{employee.status}</td>
+                                        <td>{employee.attendence ? <Switch state={employee.attendence} /> : <Switch state={employee.attendence} />}</td>
                                         <td>
-                                            <button>
-                                                View
-                                            </button>
+                                            {employee.pass ? <Switch state={employee.pass} /> : <Switch state={employee.pass} />}
                                         </td>
+                                        <td>{employee.marks}</td>
                                         <td>
-                                            <button>
-                                                Download
-                                            </button>
+                                            <p className={style.click}>Click Here</p>
                                         </td>
                                     </tr>
                                 )
