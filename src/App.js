@@ -27,6 +27,8 @@ import MyTasks from './TrainerPortalPages/myTasks/MyTasks';
 import TrainerProfile from './TrainerPortalPages/trainerProfile/TrainerProfile';
 import Info from './TrainerPortalPages/infoSec/Info';
 import MainForTrainerPortal from './TrainerPortalPages/viewTraings/MainForTrainerPortal';
+import ShowAddPersom from './pages/personalRec/ShowAddPerson';
+import ShowPersonalRec from './pages/personalRec/ShowPersonalRec';
 
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
         <Route path="/aprovementtable" element={<AprovementTable />} />
         <Route path="/aprovementtable2" element={<AprovementTable2 />} />
         <Route path="/assigntrainings" element={<AssignTrainings />} />
+        <Route path="/showrecdetails" element={<ShowAddPersom />} />
+        <Route path="/showpersonalrec" element={<ShowPersonalRec />} />
         {/* Trainer Portal */}
         <Route path="/trainerportal/welcome" element={<Welcome />} />
         <Route path="/trainerportal/mytasks" element={<MyTasks />} />
