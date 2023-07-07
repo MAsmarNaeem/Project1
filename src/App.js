@@ -22,11 +22,15 @@ import ComputTraining from './pages/viewTraings/ComputTraining';
 import AprovementTable from './pages/personalRec/AprovementTable';
 import AprovementTable2 from './pages/personalRec/AprovementTable2';
 import AssignTrainings from './pages/trainings/AssignTraining';
+import Welcome from './TrainerPortalPages/welcomePage/Welcome';
+import MyTasks from './TrainerPortalPages/myTasks/MyTasks';
+import TrainerProfile from './TrainerPortalPages/trainerProfile/TrainerProfile';
 
 function App() {
   return (
     <div className={style.webParent}>
       <Routes>
+        {/* HR Portal */}
         <Route path="/" element={<WellcomePage />} />
         <Route path="/hrprofile" element={<HRProfile />} />
         <Route path="/employeeprofile" element={<EmployeeProfile />} />
@@ -49,6 +53,10 @@ function App() {
         <Route path="/aprovementtable" element={<AprovementTable />} />
         <Route path="/aprovementtable2" element={<AprovementTable2 />} />
         <Route path="/assigntrainings" element={<AssignTrainings />} />
+        {/* Trainer Portal */}
+        <Route path="/trainerportal/welcome" element={<Welcome />} />
+        <Route path="/trainerportal/mytasks" element={<MyTasks />} />
+        <Route path="/trainerportal/profile" element={<TrainerProfile />} />
       </Routes>
     </div>
   );
