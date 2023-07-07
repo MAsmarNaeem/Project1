@@ -1,18 +1,16 @@
 import SideBar from '../../components/sidebar/SideBar'
-import style from './AprovementTable.module.css'
+import style from './AprovementTable2.module.css'
 import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 
 
-function AprovementTable() {
+function AprovementTable2() {
     let sample = {
-        trainingName: 'Intro To Computing',
-        venue: 'Jphar Hall',
-        month: 'Januaury',
-        duration: '3 weeks',
-        department: 'IT',
-        Time: '2:00 to 4:00 PM',
+        station: 'New York',
+        jobTitle: 'Software Engineer',
+        Supervisor: 'Taskeen',
+        department: 'Taskeen',
     }
     let data = [
         sample,
@@ -38,9 +36,6 @@ function AprovementTable() {
                         <input type="text" placeholder='Search Employee by name or id' />
                     </div>
                     <div className='d-flex'>
-                        <button className={style.bluebtn}>
-                            Planned Trainings
-                        </button>
                         <div className={style.sec2}>
                             <img src={add} alt="" />
                             <p>Add New</p>
@@ -51,28 +46,27 @@ function AprovementTable() {
 
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Training Name</td>
-                            <td>Venue</td>
-                            <td>Duration</td>
-                            <td>Month</td>
-                            <td>Time</td>
+                            <td>Station</td>
+                            <td>job title</td>
+                            <td>Supervisor</td>
                             <td>Department</td>
                             <td>Action</td>
-                            <td>Action</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         {
                             data.map((employee, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
-                                        <td className={style.textStyle1}>{employee.trainingName}</td>
-                                        <td className={style.textStyle2}>{employee.venue}</td>
-                                        <td className={style.textStyle3}>{employee.duration}</td>
-                                        <td className={style.textStyle3}>{employee.month}</td>
-                                        <td className={style.textStyle3}>{employee.Time}</td>
+                                        <td className={style.textStyle2}>{employee.station}</td>
+                                        <td className={style.textStyle3}>{employee.jobTitle}</td>
+                                        <td className={style.textStyle3}>{employee.Supervisor}</td>
                                         <td className={style.textStyle3}>{employee.department}</td>
                                         <td ><button className={style.viewBtn}>View</button>
                                         </td>
-                                        <td ><button className={style.orangebtn}>Assign training</button>
+                                        <td >
+                                            <button className={style.viewBtn2}>Approve</button>
+                                            <button className={style.orangebtn}>Disapprove</button>
                                         </td>
                                     </tr>
                                 )
@@ -91,4 +85,4 @@ function AprovementTable() {
     )
 }
 
-export default AprovementTable
+export default AprovementTable2

@@ -119,6 +119,7 @@ function Main() {
                 <SideBar />
             </div>
             <div className={style.subparent}>
+        <p className={style.redtxt}>Employees who are getting trained</p>
                 <ProfileUser />
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
@@ -127,7 +128,6 @@ function Main() {
                     </div>
                 </div>
                 <div className={style.tableParent}>
-
                     <table className={style.table}>
                         <tr className={style.headers}>
                             <td>Employee Code</td>

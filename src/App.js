@@ -20,51 +20,35 @@ import ViewTrainings2 from './pages/infoSec/ViewTrainings2';
 import Main from './pages/viewTraings/Main';
 import ComputTraining from './pages/viewTraings/ComputTraining';
 import AprovementTable from './pages/personalRec/AprovementTable';
+import AprovementTable2 from './pages/personalRec/AprovementTable2';
+import AssignTrainings from './pages/trainings/AssignTraining';
 
 function App() {
   return (
     <div className={style.webParent}>
       <Routes>
-        {/* 1 */}
         <Route path="/" element={<WellcomePage />} />
-        {/* 2 */}
         <Route path="/hrprofile" element={<HRProfile />} />
-        {/* 3 */}
         <Route path="/employeeprofile" element={<EmployeeProfile />} />
-        {/* 4 */}
         <Route path="/employees" element={<Employees />} />
-        {/* 5 */}
         <Route path="/addemployees" element={<AddEmployees />} />
-        {/* 6 */}
         <Route path="/addtrainer" element={<AddTrainer />} />
-        {/* 7 */}
         <Route path="/addtrainings" element={<AddTraining />} />
-        {/* 8 */}
         <Route path="/trainings" element={<Trainings />} />
-        {/* 9 */}
         <Route path="/yearly" element={<YearlyPlan />} />
-        {/* 10 */}
         <Route path="/monthly" element={<Monthly />} />
-        {/* 11 */}
         <Route path="/weekly1" element={<Checked />} />
-        {/* 12 */}
         <Route path="/weekly2" element={<Input />} />
-        {/* 13 */}
         <Route path="/addmonthlyplan" element={<AddPlan />} />
-        {/* 14 */}
         <Route path="/addpersonalrec" element={<PersonalRec />} />
-        {/* 15 */}
         <Route path="/addperson" element={<AddPerson />} />
-        {/* 16 */}
         <Route path="/viewtrainings" element={<ViewTrainings />} />
-        {/* 17 */}
         <Route path="/viewtrainings2" element={<ViewTrainings2 />} />
-        {/* 18 */}
         <Route path="/viewtrainingslist" element={<Main />} />
-        {/* 19 */}
         <Route path="/computertainings" element={<ComputTraining />} />
-        {/* 20 */}
         <Route path="/aprovementtable" element={<AprovementTable />} />
+        <Route path="/aprovementtable2" element={<AprovementTable2 />} />
+        <Route path="/assigntrainings" element={<AssignTrainings />} />
       </Routes>
     </div>
   );
