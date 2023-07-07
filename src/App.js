@@ -37,7 +37,7 @@ function App() {
         <Route path="/hrprofile" element={<HRProfile />} />
         <Route path="/employeeprofile" element={<EmployeeProfile />} />
         <Route path="/employees" element={<Employees />} />
-        <Route path="/addemployees" element={<AddEmployees />} />
+        <Route path="/addemployee" element={<AddEmployees />} />
         <Route path="/addtrainer" element={<AddTrainer />} />
         <Route path="/addtrainings" element={<AddTraining />} />
         <Route path="/trainings" element={<Trainings />} />
