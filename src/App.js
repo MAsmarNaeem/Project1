@@ -25,6 +25,8 @@ import AssignTrainings from './pages/trainings/AssignTraining';
 import Welcome from './TrainerPortalPages/welcomePage/Welcome';
 import MyTasks from './TrainerPortalPages/myTasks/MyTasks';
 import TrainerProfile from './TrainerPortalPages/trainerProfile/TrainerProfile';
+import Info from './TrainerPortalPages/infoSec/Info';
+import MainForTrainerPortal from './TrainerPortalPages/viewTraings/MainForTrainerPortal';
 
 function App() {
   return (
@@ -57,6 +59,8 @@ function App() {
         <Route path="/trainerportal/welcome" element={<Welcome />} />
         <Route path="/trainerportal/mytasks" element={<MyTasks />} />
         <Route path="/trainerportal/profile" element={<TrainerProfile />} />
+        <Route path="/trainerportal/traininginfo" element={<Info />} />
+        <Route path="/trainerportal/trainings" element={<MainForTrainerPortal />} />
       </Routes>
     </div>
   );

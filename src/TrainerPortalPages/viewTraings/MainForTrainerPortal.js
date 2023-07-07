@@ -1,12 +1,12 @@
-import SideBar from '../../components/sidebar/SideBar'
 import style from './Main.module.css'
 import search from '../../assets/images/employees/Search.svg'
 import avatar from '../../assets/images/employees/Avatar.png'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import Switch from '../../components/switch/Switch'
+import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 
 
-function Main() {
+function MainForTrainerPortal() {
     let sampleData = {
         img: avatar,
         code: '3310',
@@ -33,7 +33,7 @@ function Main() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-                <SideBar />
+                <SidebarForTrainerpor />
             </div>
             <div className={style.subparent}>
                 <p className={style.redtxt}>Employees who are getting trained</p>
@@ -41,7 +41,7 @@ function Main() {
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
-                        <input type="text" placeholder='Search Employee by name or id' />
+                        <input type="text" placeholder='Search Training by name' />
                     </div>
                 </div>
                 <div className={style.tableParent}>
@@ -52,11 +52,11 @@ function Main() {
                             <td>CNIC</td>
                             <td>Phone Number</td>
                             <td>Email</td>
-                            <td>Result Status</td>
                             <td>Pass/Fail</td>
                             <td>Attendence</td>
                             <td>Obtained Marks</td>
                             <td>Remarks</td>
+                            <td>Generate Certificate</td>
                         </tr>
                         {
                             data.map((employee, i) => {
@@ -69,14 +69,17 @@ function Main() {
                                         <td>{employee.cnic}</td>
                                         <td>{employee.phonen}</td>
                                         <td>{employee.email}</td>
-                                        <td>{employee.status}</td>
+                                        {/* <td>{employee.status}</td> */}
                                         <td>{employee.attendence ? <Switch state={employee.attendence} /> : <Switch state={employee.attendence} />}</td>
                                         <td>
                                             {employee.pass ? <Switch state={employee.pass} /> : <Switch state={employee.pass} />}
                                         </td>
                                         <td>{employee.marks}</td>
                                         <td>
-                                            <p className={style.click}>Click Here</p>
+                                            <p className={style.btn}>Click Here</p>
+                                        </td>
+                                        <td>
+                                            <p className={style.btn}>Click Here</p>
                                         </td>
                                     </tr>
                                 )
@@ -95,4 +98,4 @@ function Main() {
     )
 }
 
-export default Main
+export default MainForTrainerPortal
