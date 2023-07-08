@@ -4,7 +4,11 @@ import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Navbar from '../../components/navbar/Navbar'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 function Monthly() {
+    const [offcanvas, setOffcanvas] = useState(false)
     const navigate = useNavigate()
     const data = [
         'January',
@@ -20,9 +24,13 @@ function Monthly() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
-                <ProfileUser />
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
@@ -43,7 +51,7 @@ function Monthly() {
                                         <td>
                                             <p>{month}</p>
                                         </td>
-                                        <td ><button onClick={()=>{
+                                        <td ><button onClick={() => {
                                             navigate('/hr/trainingweeks')
                                         }} className={style.view}>
                                             View

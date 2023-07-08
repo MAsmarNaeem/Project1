@@ -4,7 +4,11 @@ import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import { useNavigate } from 'react-router-dom'
+import Navbar from '../../components/navbar/Navbar'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import { useState } from 'react'
 function YearlyPlan() {
+    const [offcanvas, setOffcanvas] = useState(false)
     let data = [
         '2023',
         '2023',
@@ -21,9 +25,13 @@ function YearlyPlan() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
-            <ProfileUser />
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
@@ -50,7 +58,7 @@ function YearlyPlan() {
                                         <td>
                                             <p>{year}</p>
                                         </td>
-                                        <td ><button onClick={()=>{
+                                        <td ><button onClick={() => {
                                             navigate('/hr/selectmonth')
                                         }} className={style.view}>
                                             View

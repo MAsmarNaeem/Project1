@@ -6,15 +6,23 @@ import ProfileUser from '../../components/profileUser/ProfileUser'
 import copyP from '../../assets/images/employeeProfile/CopyP.svg'
 import Office from '../../assets/images/employeeProfile/Office.svg'
 import msg from '../../assets/images/hrprofile/mail.svg'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Navbar from '../../components/navbar/Navbar'
+import { useState } from 'react'
 
 function AddTrainer() {
+    const [offcanvas, setOffcanvas] = useState(false)
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
             <div className={style.form}>
-                <ProfileUser />
+                <ProfileUser path='/hr/profile' />
                 <div className={style.headers}>
                     <div className={style.spans}>
                         <span></span>

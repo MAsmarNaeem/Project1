@@ -4,7 +4,11 @@ import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import tick from '../../assets/images/tick.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
+import { useState } from 'react'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Navbar from '../../components/navbar/Navbar'
 function Checked() {
+    const [offcanvas, setOffcanvas] = useState(false)
     let data = [
         {
             trainName: 'Intro To Computing',
@@ -59,9 +63,13 @@ function Checked() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
-            <ProfileUser />
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.searchbar}>
                     <div className={style.sec1}>

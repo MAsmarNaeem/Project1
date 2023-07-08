@@ -3,14 +3,22 @@ import SideBar from '../../components/sidebar/SideBar'
 import style from './AddPlan.module.css'
 import arrow from '../../assets/images/addEmployee/arrow.svg'
 import date from '../../assets/images/employeeProfile/Calendar.svg'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Navbar from '../../components/navbar/Navbar'
+import { useState } from 'react'
 
 function AddPlan() {
+    const [offcanvas, setOffcanvas] = useState(false)
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
-            <ProfileUser />
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.headers}>
                     <div className={style.spans}>
@@ -44,7 +52,7 @@ function AddPlan() {
                             <div>
                                 <input type="text" placeholder='dd----yyyy' />
                                 <div className={style.indicator}>
-                                        <img style={{width:'20px' , height:'20px'}} src={date} alt="" />
+                                    <img style={{ width: '20px', height: '20px' }} src={date} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -54,7 +62,7 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) 9:00 AM to 6:00 PM' />
-                               
+
                             </div>
                         </div>
                         <div className={style.inputParent}>
@@ -91,7 +99,7 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) Training Hall' />
-                            
+
                             </div>
                         </div>
                         <div className={style.inputParent}>
@@ -100,7 +108,7 @@ function AddPlan() {
                             </div>
                             <div>
                                 <input type="text" placeholder='(e.g) 2 Days' />
-                              
+
                             </div>
                         </div>
                         <div className={`${style.checkinputParent} ${style.bg}`}>
@@ -109,7 +117,7 @@ function AddPlan() {
                             </div>
                             <div className={style.dropdown}>
                                 <div className='d-flex justify-content-between align-items-center gap-2' >
-                                    <input style={{width:'26px' , height:'36px'}} type="radio" />
+                                    <input style={{ width: '26px', height: '36px' }} type="radio" />
                                     <p className={style.paraind}>Internal</p>
                                 </div>
                                 <div className='bg-#FFF d-flex justify-content-between align-items-center w-50 gap-2'>
