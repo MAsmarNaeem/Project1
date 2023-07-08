@@ -54,7 +54,7 @@ const DropDowns = () => {
                         <li className={indicator === 'plannedtrainings' ? style.checkedli : null} onClick={() => indicatorManager('/hr/planned/trainings')}>
                             <img src={pageS} alt="" />
                             Planed Trainings</li>
-                        <li className={indicator === 'd' ? style.checkedli : null} onClick={() => indicatorManager('/hr/addtrainer')}>
+                        <li className={indicator === 'd' ? style.checkedli : null} onClick={() => indicatorManager('/hr/trainers')}>
                             <img src={addLayer} alt="" />
                             Trainers</li>
                         <li className={indicator === 'e' ? style.checkedli : null} onClick={() => indicatorManager('/hr/personalrec')}>

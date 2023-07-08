@@ -1,25 +1,32 @@
+import style from './Trainers.module.css'
 import SideBar from '../../components/sidebar/SideBar'
-import style from './TrainingsRef.module.css'
 import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
+import avatar from '../../assets/images/employees/Avatar.png'
 import ProfileUser from '../../components/profileUser/ProfileUser'
+import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-
-
-function TrainingsRef() {
+function Trainers() {
     const [offcanvas, setOffcanvas] = useState(false)
+    let sampleData = {
+        code: '3310',
+        name: 'Tanner Finsha',
+        img: avatar,
+        age: '24 Years',
+        exp: '2 Years',
+        email: 'Emetowinner@gmail.com'
+    }
     let data = [
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
-        'Intro To Computing',
+        sampleData,
+        sampleData,
+        sampleData,
+        sampleData,
+        sampleData,
+        sampleData,
+        sampleData,
+        sampleData,
     ]
     let next = 'Next page >>'
     const navigate = useNavigate()
@@ -32,47 +39,45 @@ function TrainingsRef() {
                 <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
-                <ProfileUser path='/hr/profile' />
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
-                        <input type="text" placeholder='Search Training by name' />
+                        <input type="text" placeholder='Search Trainer by name or id' />
                     </div>
-                    <div className={style.sec2} onClick={() => {
-                        navigate('/hr/addtraining')
-                    }}>
+                    <div onClick={() => {
+                        navigate('/hr/addtrainer')
+                    }} className={style.sec2} >
                         <img src={add} alt="" />
-                        <p>Add New</p>
+                        <p>Add Trainer</p>
                     </div>
                 </div>
-                <div className={style.tableParent}>
-
+                <div className={style.tableParent2}>
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Serial #</td>
-                            <td>Training Name</td>
-                            <td>Description</td>
-                            <td>Evaluation Criteria </td>
+                            <td>Employee Code</td>
+                            <td>Name</td>
+                            <td>Age</td>
+                            <td>Email</td>
+                            <td>Experience</td>
+                            <td>Speciality</td>
                             <td>Documents</td>
                         </tr>
                         {
                             data.map((employee, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
-                                        <td className={style.simpleContent}>{i + 1}</td>
-                                        <td className={style.simpleContent}>{employee}</td>
-                                        <td >
-
-                                            <p onClick={() => {
-                                                navigate('/hr/training/info')
-                                            }} className={style.click}>Click Here</p>
+                                        <td>
+                                            <p>{employee.code}</p>
                                         </td>
+                                        <td><img src={employee.img} alt="" /> {employee.name}</td>
+                                        <td>{employee.age}</td>
+                                        <td>{employee.email}</td>
+                                        <td>{employee.exp}</td>
                                         <td >
-
                                             <p onClick={() => {
-                                                navigate('/hr/training/info')
-                                            }} className={style.click}>Click Here</p>
+                                            }} className={style.view}>View</p>
                                         </td>
                                         <td >
                                             <p className={style.download}>Download</p>
@@ -94,4 +99,4 @@ function TrainingsRef() {
     )
 }
 
-export default TrainingsRef
+export default Trainers

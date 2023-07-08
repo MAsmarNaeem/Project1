@@ -8,15 +8,24 @@ import copy from '../../assets/images/employeeProfile/CopyP.svg'
 import calender from '../../assets/images/employeeProfile/Calendar.svg'
 import office from '../../assets/images/employeeProfile/Office.svg'
 import cnic from '../../assets/images/employeeProfile/UserCard.svg'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Navbar from '../../components/navbar/Navbar'
+import { useState } from 'react'
 
 function ViewTrainings() {
+    const [offcanvas, setOffcanvas] = useState(false)
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <HROffcanvas status={offcanvas} />
                 <SideBar />
             </div>
-            <ProfileUser />
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
+                <p className={style.redtxt}>Intro to Computing</p>
                 <div className={style.cardParent}>
                     <div className={style.card1headers}>
                         <div>
@@ -71,7 +80,7 @@ function ViewTrainings() {
                             <div>
                                 <img src={copy} alt="" />
                                 <div>
-                                    <p className={style.card1para}>Course Description</p>
+                                    <p className={style.card1para}>Description</p>
                                     <p className={style.card1para2}>Main Course</p>
                                 </div>
                             </div>
@@ -82,11 +91,18 @@ function ViewTrainings() {
                                     <p className={style.card1para2}>External</p>
                                 </div>
                             </div>
+                            <div>
+                                <img src={office} alt="" />
+                                <div>
+                                    <p className={style.card1para}>Trainer Name</p>
+                                    <p className={style.card1para2}>Muhammad Zubair</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

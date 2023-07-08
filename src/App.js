@@ -8,18 +8,13 @@ import AddEmployees from './HRPortal/Employees/AddEmployees';
 import AddTrainer from './HRPortal/addTrainer/AddTrainer';
 import AddTraining from './HRPortal/trainings/AddTraining';
 import YearlyPlan from './HRPortal/yearlyPlan/YearlyPlan';
-// import Trainings from './HRPortal/trainings/Training';
 import Monthly from './HRPortal/yearlyPlan/Monthly';
 import Checked from './HRPortal/yearlyPlan/Checked';
 import Input from './HRPortal/yearlyPlan/Input';
 import AddPlan from './HRPortal/monthly/AddPlan';
 import PersonalRec from './HRPortal/personalRec/PersonalRec';
 import AddPerson from './HRPortal/personalRec/AddPerson';
-import ViewTrainings from './HRPortal/infoSec/ViewTrainings';
-import ViewTrainings2 from './HRPortal/infoSec/ViewTrainings2';
-// import ComputTraining from './HRPortal/viewTraings/ComputTraining';
-import AprovementTable from './HRPortal/plannedTrainings/PlannedTrainings';
-import AprovementTable2 from './HRPortal/personalRec/Main';
+import ViewTrainings from './HRPortal/trainings/ViewTrainings';
 import AssignTrainings from './HRPortal/plannedTrainings/AssignTraining';
 import Welcome from './TrainerPortalPages/welcomePage/Welcome';
 import MyTasks from './TrainerPortalPages/myTasks/MyTasks';
@@ -32,9 +27,9 @@ import ShowPersonalRec from './HRPortal/personalRec/ShowPersonalRec';
 import Trainings from './HRPortal/trainingRecords/Trainings';
 import TrainedEmployees from './HRPortal/trainingRecords/TrainedEmployees';
 import TrainingsRef from './HRPortal/trainings/TrainingsRef';
-// import planedTrainings from './HRPortal/plannedTrainings/PlannedTrainings'
 import PlannedTrainings from './HRPortal/plannedTrainings/PlannedTrainings';
 import Main from './HRPortal/personalRec/Main';
+import Trainers from './HRPortal/addTrainer/Trainers';
 
 function App() {
   return (
@@ -56,23 +51,26 @@ function App() {
         <Route path="/hr/addtraining" element={<AddTraining />} />
         <Route path="/hr/planned/trainings" element={<PlannedTrainings />} />
         <Route path="/hr/assign/trainings" element={<AssignTrainings />} />
+        {/* Do Working */}
+        <Route path="/hr/training/info" element={<ViewTrainings />} />
         {/* personalRec */}
         <Route path="/hr/personalrec" element={<Main />} />
         <Route path="/hr/showrecdetails" element={<ShowAddPersom />} />
-        <Route path="/hr/giveplan" element={<Input />} />
         <Route path="/hr/showpersonalrec" element={<ShowPersonalRec />} />
         <Route path="/hr/hiriningrec" element={<PersonalRec />} />
-        {/* <Route path="/hr/traininginfo" element={<Info />} /> */}
-        {/* <Route path="/trainings" element={<Trainings />} /> */}
-        <Route path="/hr/addmonthlyplan" element={<AddPlan />} />
+        <Route path="/hr/addpersonalrec" element={<AddPerson />} />
+        {/* Yearly Plan */}
+        <Route path="/hr/giveplan" element={<Input />} />
         <Route path="/hr/yearlyplan" element={<YearlyPlan />} />
         <Route path="/hr/trainingweeks" element={<Checked />} />
-        <Route path="/hr/addtrainer" element={<AddTrainer />} />
-        {/* <Route path="/hr/trainings" element={<ComputTraining />} /> */}
-        <Route path="/hr/addpersonalrec" element={<AddPerson />} />
         <Route path="/hr/selectmonth" element={<Monthly />} />
-        <Route path="/viewtrainings" element={<ViewTrainings />} />
-        {/* Trainer Portal */}
+        {/* Month Plan */}
+        <Route path="/hr/addmonthlyplan" element={<AddPlan />} />
+        {/* Trainer */}
+        <Route path="/hr/addtrainer" element={<AddTrainer />} />
+        {/* Do Working */}
+        <Route path="/hr/trainers" element={<Trainers />} />
+        {/* --->Trainer Portal<--- */}
         <Route path="/trainer" element={<Welcome />} />
         <Route path="/trainer/tasks" element={<MyTasks />} />
         <Route path="/trainer/profile" element={<TrainerProfile />} />
