@@ -13,6 +13,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import Offcanvas from '../../components/offcanvas/Offcanvas'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 
 function Info() {
     const [alert, setalert] = useState(false)
@@ -29,10 +30,10 @@ function Info() {
                     <Navbar func={() => {
                         setOffcanvas(!offcanvas)
                     }} />
-                    <Offcanvas status={offcanvas} />
-                    <SidebarForTrainerpor />
+                    <HROffcanvas status={offcanvas} />
+                    <SideBar />
                 </div>
-                <ProfileUser path='/trainer/profile' />
+                <ProfileUser path='/hr/profile' />
                 <div className={style.subparent}>
                     <p className={style.headingtxt}>Training Information</p>
                     <div className={style.cardParent}>
@@ -52,14 +53,14 @@ function Info() {
                                     <img src={calender} alt="" />
                                     <div>
                                         <p className={style.card1para}>Plan Date</p>
-                                        <p className={style.card1para2}>24-04-2023</p>
+                                        <input className={style.calender} type="date" placeholder='dd----yyyy' />
                                     </div>
                                 </div>
                                 <div>
                                     <img src={calender} alt="" />
                                     <div>
                                         <p className={style.card1para}>Actual Date</p>
-                                        <input className={style.calender} type="date" placeholder='dd----yyyy' />
+                                        <p className={style.card1para2}>dd----yyyy</p>
                                     </div>
                                 </div>
                                 <div>
@@ -119,8 +120,8 @@ function Info() {
                                 <div>
                                     <img src={cnic} alt="" />
                                     <div>
-                                        <p className={style.card1para}>Submit Training</p>
-                                        <p className={style.redtxt}>Conducted</p>
+                                        <p className={style.card1para}>Training Status</p>
+                                        <p className={style.redtxt}>Not Conducted</p>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +135,7 @@ function Info() {
                     <div className={style.bottomside}>
                         <p className={style.bheading}>Employess who are getting trained</p>
                         <button onClick={() => {
-                            navigate('/trainer/trainings')
+                            navigate('/hr/trainedemployees')
                         }} className={style.bottombtn}>Click Here</button>
 
                     </div>

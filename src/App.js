@@ -1,70 +1,83 @@
 import style from './App.module.css';
 import { Route, Routes } from "react-router-dom";
-import WellcomePage from './pages/welcomePage/Wellcome';
-import HRProfile from './pages/HRProfile/HRProfile';
-import EmployeeProfile from './pages/employeeeProfile/EmployeeProfile';
-import Employees from './pages/Employees/Employees';
-import AddEmployees from './pages/addEmployees/AddEmployees';
-import AddTrainer from './pages/addTrainer/AddTrainer';
-import AddTraining from './pages/addTraining/AddTraining';
-import YearlyPlan from './pages/yearlyPlan/YearlyPlan';
-import Trainings from './pages/trainings/Training';
-import Monthly from './pages/monthly/Monthly';
-import Checked from './pages/weeks/Checked';
-import Input from './pages/weeks/Input';
-import AddPlan from './pages/monthly/AddPlan';
-import PersonalRec from './pages/personalRec/PersonalRec';
-import AddPerson from './pages/personalRec/AddPerson';
-import ViewTrainings from './pages/infoSec/ViewTrainings';
-import ViewTrainings2 from './pages/infoSec/ViewTrainings2';
-import Main from './pages/viewTraings/Main';
-import ComputTraining from './pages/viewTraings/ComputTraining';
-import AprovementTable from './pages/personalRec/AprovementTable';
-import AprovementTable2 from './pages/personalRec/AprovementTable2';
-import AssignTrainings from './pages/trainings/AssignTraining';
+import WellcomePage from './HRPortal/welcomePage/Wellcome';
+import HRProfile from './HRPortal/HRProfile/HRProfile';
+import EmployeeProfile from './HRPortal/Employees/EmployeeProfile';
+import Employees from './HRPortal/Employees/Employees';
+import AddEmployees from './HRPortal/Employees/AddEmployees';
+import AddTrainer from './HRPortal/addTrainer/AddTrainer';
+import AddTraining from './HRPortal/trainings/AddTraining';
+import YearlyPlan from './HRPortal/yearlyPlan/YearlyPlan';
+// import Trainings from './HRPortal/trainings/Training';
+import Monthly from './HRPortal/monthly/Monthly';
+import Checked from './HRPortal/weeks/Checked';
+import Input from './HRPortal/personalRec/Input';
+import AddPlan from './HRPortal/monthly/AddPlan';
+import PersonalRec from './HRPortal/personalRec/PersonalRec';
+import AddPerson from './HRPortal/personalRec/AddPerson';
+import ViewTrainings from './HRPortal/infoSec/ViewTrainings';
+import ViewTrainings2 from './HRPortal/infoSec/ViewTrainings2';
+// import ComputTraining from './HRPortal/viewTraings/ComputTraining';
+import AprovementTable from './HRPortal/plannedTrainings/PlannedTrainings';
+import AprovementTable2 from './HRPortal/personalRec/Main';
+import AssignTrainings from './HRPortal/plannedTrainings/AssignTraining';
 import Welcome from './TrainerPortalPages/welcomePage/Welcome';
 import MyTasks from './TrainerPortalPages/myTasks/MyTasks';
 import TrainerProfile from './TrainerPortalPages/trainerProfile/TrainerProfile';
 import Info from './TrainerPortalPages/infoSec/Info';
+import TrainingInfo from './HRPortal/trainingRecords/Info';
 import MainForTrainerPortal from './TrainerPortalPages/viewTraings/MainForTrainerPortal';
-import ShowAddPersom from './pages/personalRec/ShowAddPerson';
-import ShowPersonalRec from './pages/personalRec/ShowPersonalRec';
+import ShowAddPersom from './HRPortal/personalRec/ShowAddPerson';
+import ShowPersonalRec from './HRPortal/personalRec/ShowPersonalRec';
+import Trainings from './HRPortal/trainingRecords/Trainings';
+import TrainedEmployees from './HRPortal/trainingRecords/TrainedEmployees';
+import TrainingsRef from './HRPortal/trainings/TrainingsRef';
+// import planedTrainings from './HRPortal/plannedTrainings/PlannedTrainings'
+import PlannedTrainings from './HRPortal/plannedTrainings/PlannedTrainings';
+import Main from './HRPortal/personalRec/Main';
 
 function App() {
   return (
     <div className={style.webParent}>
       <Routes>
-        {/* HR Portal */}
-        <Route path="/" element={<WellcomePage />} />
-        <Route path="/hrprofile" element={<HRProfile />} />
-        <Route path="/employeeprofile" element={<EmployeeProfile />} />
-        <Route path="/employees" element={<Employees />} />
-        <Route path="/addemployee" element={<AddEmployees />} />
-        <Route path="/addtrainer" element={<AddTrainer />} />
-        <Route path="/addtrainings" element={<AddTraining />} />
-        <Route path="/trainings" element={<Trainings />} />
-        <Route path="/yearly" element={<YearlyPlan />} />
-        <Route path="/monthly" element={<Monthly />} />
-        <Route path="/weekly1" element={<Checked />} />
-        <Route path="/weekly2" element={<Input />} />
-        <Route path="/addmonthlyplan" element={<AddPlan />} />
-        <Route path="/addpersonalrec" element={<PersonalRec />} />
-        <Route path="/addperson" element={<AddPerson />} />
+        {/* --->HR Portal<--- */}
+        {/* Employee Button Pages */}
+        <Route path="/hr" element={<WellcomePage />} />
+        <Route path="/hr/profile" element={<HRProfile />} />
+        <Route path="/hr/employeeProfile" element={<EmployeeProfile />} />
+        <Route path="/hr/employees" element={<Employees />} />
+        <Route path="/hr/addemployee" element={<AddEmployees />} />
+        {/* Training recs */}
+        <Route path="/hr/trainings" element={<Trainings />} />
+        <Route path="/hr/traininginfo" element={<TrainingInfo />} />
+        <Route path="/hr/trainedemployees" element={<TrainedEmployees />} />
+        {/* Training */}
+        <Route path="/hr/trainingsref" element={<TrainingsRef />} />
+        <Route path="/hr/addtraining" element={<AddTraining />} />
+        <Route path="/hr/planned/trainings" element={<PlannedTrainings />} />
+        <Route path="/hr/assign/trainings" element={<AssignTrainings />} />
+        {/* personalRec */}
+        <Route path="/hr/personalrec" element={<Main />} />
+        <Route path="/hr/showrecdetails" element={<ShowAddPersom />} />
+        <Route path="/hr/giveplan" element={<Input />} />
+        <Route path="/hr/showpersonalrec" element={<ShowPersonalRec />} />
+        <Route path="/hr/hiriningrec" element={<PersonalRec />} />
+        {/* <Route path="/hr/traininginfo" element={<Info />} /> */}
+        {/* <Route path="/trainings" element={<Trainings />} /> */}
+        <Route path="/hr/addmonthlyplan" element={<AddPlan />} />
+        <Route path="/hr/yearlyplan" element={<YearlyPlan />} />
+        <Route path="/hr/trainingweeks" element={<Checked />} />
+        <Route path="/hr/addtrainer" element={<AddTrainer />} />
+        {/* <Route path="/hr/trainings" element={<ComputTraining />} /> */}
+        <Route path="/hr/addpersonalrec" element={<AddPerson />} />
+        <Route path="/hr/selectmonth" element={<Monthly />} />
         <Route path="/viewtrainings" element={<ViewTrainings />} />
-        <Route path="/viewtrainings2" element={<ViewTrainings2 />} />
-        <Route path="/viewtrainingslist" element={<Main />} />
-        <Route path="/computertainings" element={<ComputTraining />} />
-        <Route path="/aprovementtable" element={<AprovementTable />} />
-        <Route path="/aprovementtable2" element={<AprovementTable2 />} />
-        <Route path="/assigntrainings" element={<AssignTrainings />} />
-        <Route path="/showrecdetails" element={<ShowAddPersom />} />
-        <Route path="/showpersonalrec" element={<ShowPersonalRec />} />
         {/* Trainer Portal */}
-        <Route path="/trainerportal/welcome" element={<Welcome />} />
-        <Route path="/trainerportal/mytasks" element={<MyTasks />} />
-        <Route path="/trainerportal/profile" element={<TrainerProfile />} />
-        <Route path="/trainerportal/traininginfo" element={<Info />} />
-        <Route path="/trainerportal/trainings" element={<MainForTrainerPortal />} />
+        <Route path="/trainer" element={<Welcome />} />
+        <Route path="/trainer/tasks" element={<MyTasks />} />
+        <Route path="/trainer/profile" element={<TrainerProfile />} />
+        <Route path="/trainer/traininginfo" element={<Info />} />
+        <Route path="/trainer/trainings" element={<MainForTrainerPortal />} />
       </Routes>
     </div>
   );

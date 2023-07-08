@@ -13,7 +13,7 @@
 .searchbar {
   display: flex;
   margin: auto;
-  width: 97%;
+  width: 95%;
   height: 62px;
   padding: 1px 16px 1px 0px;
   justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .sec1 {
   display: flex;
-  width: 100%;
+  width: 425px;
   height: 46px;
   padding: 12px 38px 12px 15px;
   align-items: flex-start;
@@ -47,12 +47,32 @@
   line-height: normal;
   border: 0;
   outline: 0;
-  width: 100%;
+  width: 60%;
 }
 
+.sec2 {
+  border-radius: 8px;
+  border: 1px solid #2b5ce6;
+  width: 127px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.sec2 > p {
+  color: #2b5ce6;
+  font-size: 14px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .tableParent {
   overflow-x: scroll;
-  width: 93%;
+  width: 98%;
   height: 620px;
 
   margin: auto;
@@ -60,11 +80,28 @@
   margin-left: 18px;
 }
 .tableParent2 {
-  width: 97%;
+  width: 95%;
+  overflow-x: scroll;
   height: 620px;
-  margin: auto;
+  margin-left: 2.5%;
   margin-top: 13px;
 }
+
+/* .tableParent::-webkit-scrollbar {
+    width: 1089px;
+    height: 26px;
+    flex-shrink: 0;
+  
+    border-radius: 20px;
+    background: #d9d9d9;
+  }
+  .tableParent:-webkit-scrollbar-thumb {
+    width: 597px !important;
+    height: 14px !important;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #8b8b8b !important;
+  } */
 
 .table {
   width: 100%;
@@ -91,10 +128,46 @@
   line-height: 18px;
 }
 .headers > td:nth-child(1) {
-  width: 50%;
+  width: 74px;
 }
 .headers > td:nth-child(2) {
-  width: 50%;
+  width: 138px;
+}
+.headers > td:nth-child(3) {
+  width: 229px;
+}
+.headers > td:nth-child(4) {
+  width: 187px;
+}
+.headers > td:nth-child(5) {
+  width: 221px;
+}
+.headers > td:nth-child(6) {
+  width: 240px;
+}
+.tablebody > td:nth-child(1) {
+  width: 74px;
+}
+.tablebody > td:nth-child(2) {
+  width: 138px;
+}
+.tablebody > td:nth-child(3) {
+  width: 229px;
+}
+.tablebody > td:nth-child(4) {
+  width: 187px;
+}
+.tablebody > td:nth-child(5) {
+  width: 221px;
+}
+.tablebody > td:nth-child(6) {
+  width: 240px;
+}
+
+.tablebody > td:nth-child(2) > p {
+  padding: 2px 8px 2px 6px;
+  border-radius: 16px;
+  background: var(--foundation-blue-b-20, #f5f6f7);
 }
 
 .tablebody > td {
@@ -104,61 +177,44 @@
   align-items: center;
   gap: 12px;
   align-self: stretch;
-  color: var(--foundation-blue-b-500, #42526d);
-  color: #000;
-  font-size: 12px;
+}
+.textStyle3 {
+  color: var(--foundation-blue-b-200, #6b788e);
+  text-align: center;
   font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.textStyle2 {
+  color: var(--gray-900, #101828);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.textStyle1 {
+  color: var(--foundation-blue-b-900, #091e42);
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
 }
-
 .tablebody {
   display: flex;
   align-items: center;
   align-self: stretch;
   border-bottom: 1px solid var(--gray-200, #eaecf0);
 }
-.tablebody > td:nth-child(1) {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 6px;
-}
-.tablebody > td:nth-child(1) > p {
-  color: var(--foundation-blue-b-200, #6b788e);
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-}
-.tablebody > td:nth-child(2) {
-  width: 50%;
-}
-
-.view {
-  width: 72px;
-  height: 31px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  border: 1px solid #2b5ce6;
-  background: #fff;
-  color: #2b5ce6;
-  cursor: pointer;
-}
-.view:hover {
-  background-color: #2b5ce6;
-  color: #fff;
-}
-
 .next {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 71px;
   margin-right: 31px;
   margin-bottom: 28px;
 }
@@ -178,10 +234,6 @@
   border: 1px solid #7e7e7e;
 }
 
-.next > button:hover{
-  background-color: #7e7e7e;
-  color: #fff;
-}
 @media (max-width: 1350px) {
   .sidebar {
     width: 20%;
@@ -213,8 +265,6 @@
   .subparent {
     width: 100%;
     margin-top: 40px;
-  }
-  .sec2 {
-    margin-right: 0px;
+    overflow-x: scroll;
   }
 }

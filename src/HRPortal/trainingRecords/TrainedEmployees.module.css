@@ -34,7 +34,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 12rem;
+  margin-top: 112px;
+}
+
+@media (max-width: 750px) {
+  .redtxt {
+    margin-top: 12rem;
+  }
 }
 
 .sec1 {
@@ -93,7 +99,7 @@
 }
 .tableParent2 {
   width: 490px;
-  max-height: 620px;
+  height: 620px;
   margin: auto;
   margin-top: 13px;
   margin-left: 18px;
@@ -172,7 +178,11 @@
 .headers > td:nth-child(10) {
   width: 200px;
 }
-.btn {
+.click:hover {
+  background-color: #2b5ce6;
+  color: #fff;
+}
+.click {
   width: 117px;
   height: 31px;
   flex-shrink: 0;
@@ -180,19 +190,14 @@
   border: 1px solid #2b5ce6;
   color: #2b5ce6;
   font-family: Poppins;
-  text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   line-height: normal;
-}
-.btn:hover {
-  background-color: #2b5ce6;
-  color: #fff;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tablebody > td {
@@ -313,8 +318,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 40px;
-  margin-right: 80px;
+  margin-top: 71px;
+  margin-right: 31px;
   margin-bottom: 28px;
 }
 .next > button {
@@ -332,19 +337,10 @@
   border-radius: 5px;
   border: 1px solid #7e7e7e;
 }
+
 .next > button:hover {
   background-color: #7e7e7e;
   color: #fff;
-}
-
-@media (max-width: 1300px) {
-.next {
-  width: 90%;
-  display: flex;
-  justify-content: flex-s;
-  align-items: center;
-  margin:40px auto auto auto;
-}
 }
 
 @media (max-width: 1350px) {

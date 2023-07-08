@@ -1,17 +1,18 @@
-import style from './Main.module.css'
+import SideBar from '../../components/sidebar/SideBar'
+import style from './Employees.module.css'
 import search from '../../assets/images/employees/Search.svg'
+import add from '../../assets/images/employees/Application Add.svg'
 import avatar from '../../assets/images/employees/Avatar.png'
 import ProfileUser from '../../components/profileUser/ProfileUser'
-import Switch from '../../components/switch/Switch'
-import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
-import Navbar from '../../components/navbar/Navbar'
-import Offcanvas from '../../components/offcanvas/Offcanvas'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Navbar from '../../components/navbar/Navbar'
 
 
-function MainForTrainerPortal() {
+function Employees() {
     const [offcanvas, setOffcanvas] = useState(false)
-    let sampleData = {
+    let sampledata = {
         img: avatar,
         code: '3310',
         name: 'Tanner Finsha',
@@ -19,40 +20,50 @@ function MainForTrainerPortal() {
         phonen: '0306-56302121',
         email: 'Emetowinner@gmail.com',
         dep: 'Manufacture',
-        status: 'pending',
-        marks: 36
-
+        status: 'Not Trained'
     }
     let data = [
-        sampleData,
-        sampleData,
-        sampleData,
-        sampleData,
-        sampleData,
-        sampleData,
-        sampleData,
-        sampleData,
+        sampledata,
+        sampledata,
+        sampledata,
+        sampledata,
+        sampledata,
+        sampledata,
+        sampledata,
+        sampledata,
     ]
     let next = 'Next page >>'
+
+    const navigate = useNavigate()
+    const pushAddEmployee = () => {
+        navigate('/hr/addemployee')
+    }
+    const pushEmployeeProfile = () => {
+        navigate('/hr/employeeProfile')
+    }
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
                 <Navbar func={() => {
                     setOffcanvas(!offcanvas)
                 }} />
-                <Offcanvas status={offcanvas} />
-                <SidebarForTrainerpor />
+                <SideBar />
+                <HROffcanvas status={offcanvas} />
             </div>
             <div className={style.subparent}>
-                <p className={style.redtxt}>Employees who are getting trained</p>
-                <ProfileUser path='/trainer/profile' />
+                <ProfileUser path='/hr/profile' />
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
-                        <input type="text" placeholder='Search Training by name' />
+                        <input type="text" placeholder='Search Employee by name or id' />
+                    </div>
+                    <div onClick={pushAddEmployee} className={style.sec2}>
+                        <img src={add} alt="" />
+                        <p>Add Employee</p>
                     </div>
                 </div>
                 <div className={style.tableParent}>
+
                     <table className={style.table}>
                         <tr className={style.headers}>
                             <td>Employee Code</td>
@@ -60,11 +71,10 @@ function MainForTrainerPortal() {
                             <td>CNIC</td>
                             <td>Phone Number</td>
                             <td>Email</td>
-                            <td>Pass/Fail</td>
-                            <td>Attendence</td>
-                            <td>Obtained Marks</td>
-                            <td>Remarks</td>
-                            <td>Generate Certificate</td>
+                            <td>Department</td>
+                            <td>Training Status</td>
+                            <td>Action</td>
+                            <td>CV Certificate</td>
                         </tr>
                         {
                             data.map((employee, i) => {
@@ -73,21 +83,21 @@ function MainForTrainerPortal() {
                                         <td>
                                             <p>{employee.code}</p>
                                         </td>
-                                        <td className={style.name}><img src={employee.img} alt="" /> {employee.name}</td>
+                                        <td><img src={employee.img} alt="" /> {employee.name}</td>
                                         <td>{employee.cnic}</td>
                                         <td>{employee.phonen}</td>
                                         <td>{employee.email}</td>
-                                        {/* <td>{employee.status}</td> */}
-                                        <td>{employee.attendence ? <Switch state={employee.attendence} /> : <Switch state={employee.attendence} />}</td>
+                                        <td>{employee.dep}</td>
+                                        <td>{employee.status}</td>
                                         <td>
-                                            {employee.pass ? <Switch state={employee.pass} /> : <Switch state={employee.pass} />}
-                                        </td>
-                                        <td>{employee.marks}</td>
-                                        <td>
-                                            <p className={style.btn}>Click Here</p>
+                                            <button onClick={pushEmployeeProfile}>
+                                                View
+                                            </button>
                                         </td>
                                         <td>
-                                            <p className={style.btn}>Click Here</p>
+                                            <button>
+                                                Download
+                                            </button>
                                         </td>
                                     </tr>
                                 )
@@ -106,4 +116,4 @@ function MainForTrainerPortal() {
     )
 }
 
-export default MainForTrainerPortal
+export default Employees

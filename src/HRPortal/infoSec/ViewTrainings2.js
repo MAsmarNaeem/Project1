@@ -1,4 +1,4 @@
-import style from './Info.module.css'
+import style from './ViewTrainings2.module.css'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import SideBar from '../../components/sidebar/SideBar'
 import clock from '../../assets/images/viewtrainings/Clock.svg'
@@ -8,33 +8,23 @@ import copy from '../../assets/images/employeeProfile/CopyP.svg'
 import calender from '../../assets/images/employeeProfile/Calendar.svg'
 import office from '../../assets/images/employeeProfile/Office.svg'
 import cnic from '../../assets/images/employeeProfile/UserCard.svg'
-import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Navbar from '../../components/navbar/Navbar'
-import Offcanvas from '../../components/offcanvas/Offcanvas'
 
-function Info() {
+function ViewTrainings() {
     const [alert, setalert] = useState(false)
     const alertManager = () => {
         setalert(!alert)
     }
     const navigate = useNavigate()
-    const [offcanvas, setOffcanvas] = useState(false)
     return (
         <>
-
             <div className={style.parent}>
                 <div className={style.sidebar}>
-                    <Navbar func={() => {
-                        setOffcanvas(!offcanvas)
-                    }} />
-                    <Offcanvas status={offcanvas} />
-                    <SidebarForTrainerpor />
+                    <SideBar />
                 </div>
-                <ProfileUser path='/trainer/profile' />
+                <ProfileUser />
                 <div className={style.subparent}>
-                    <p className={style.headingtxt}>Training Information</p>
                     <div className={style.cardParent}>
                         <div className={style.card1headers}>
                             <div>
@@ -59,7 +49,7 @@ function Info() {
                                     <img src={calender} alt="" />
                                     <div>
                                         <p className={style.card1para}>Actual Date</p>
-                                        <input className={style.calender} type="date" placeholder='dd----yyyy' />
+                                        <p className={style.card1para2}>24-04-2023</p>
                                     </div>
                                 </div>
                                 <div>
@@ -79,8 +69,8 @@ function Info() {
                                 <div>
                                     <img src={star} alt="" />
                                     <div>
-                                        <p className={style.card1para}>Description</p>
-                                        <p onClick={alertManager} className={style.bluetxt}>View</p>
+                                        <p className={style.card1para}>Training Description</p>
+                                        <p className={style.bluetxt}>View</p>
                                     </div>
                                 </div>
 
@@ -119,23 +109,23 @@ function Info() {
                                 <div>
                                     <img src={cnic} alt="" />
                                     <div>
-                                        <p className={style.card1para}>Submit Training</p>
-                                        <p className={style.redtxt}>Conducted</p>
+                                        <p className={style.card1para}>Status</p>
+                                        <p className={style.redtxt}>Not Conducted</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className={style.cardsBtn}>
-                            <div className={style.cardbtn1}><p className={style.btntxt}>Images</p><button>Upload</button></div>
+                            <div className={style.cardbtn1}><p className={style.btntxt}>Images</p><button>Download</button></div>
                             <div className={style.cardbtn2}><p className={style.btntxt}>Training Material</p><button>Download</button></div>
 
                         </div>
                     </div>
                     <div className={style.bottomside}>
                         <p className={style.bheading}>Employess who are getting trained</p>
-                        <button onClick={() => {
-                            navigate('/trainer/trainings')
-                        }} className={style.bottombtn}>Click Here</button>
+                        <button className={style.bottombtn} onClick={()=>{
+                            navigate('/hr/trainedemployees')
+                        }}>Click Here</button>
 
                     </div>
                 </div>
@@ -144,17 +134,17 @@ function Info() {
                 alert ?
                     <div class={style.alertparent}>
                         <div class={style.alert}>
-                            <p class={style.msg}>Do you really want to Submit it?</p>
+                            <p class={style.msgHeading}>Evaluation Criteria</p>
+                            <p class={style.msg}>Hi this is your song</p>
                             <div className={style.alertbtns}>
-                                <button onClick={alertManager} className={style.btn1}>Submit</button>
                                 <button onClick={alertManager} className={style.btn2}>Cencel</button>
-
                             </div>
                         </div>
                     </div> : null
             }
         </>
+
     )
 }
 
-export default Info
+export default ViewTrainings

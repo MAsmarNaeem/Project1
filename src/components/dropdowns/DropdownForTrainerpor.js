@@ -4,6 +4,7 @@ import arrow from '../../assets/images/sidebar/dropdownArrow.svg'
 import profile from '../../assets/images/sidebar/profile.svg'
 import user from '../../assets/images/sidebar/User Multiple Group.svg'
 import copyPaste from '../../assets/images/sidebar/Copy Paste.svg'
+import { useNavigate } from 'react-router-dom';
 
 const DropdownForTrainerpor = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +17,10 @@ const DropdownForTrainerpor = () => {
             setIsOpen(true);
         }
     };
+    const navigate = useNavigate()
     const indicatorManager = (e) => {
         setIndicator(e)
+        navigate(e)
     }
 
     return (
@@ -34,7 +37,7 @@ const DropdownForTrainerpor = () => {
                 </div>
                 {isOpen ? <div className={style.optsParent}>
                     <ul className={style.opts}>
-                        <li className={indicator === 'a' ? style.checkedli : null} onClick={() => indicatorManager('a')}>
+                        <li className={indicator === 'a' ? style.checkedli : null} onClick={() => indicatorManager('/trainer/tasks')}>
                             <img src={copyPaste} alt="" />
                             My tasks
                         </li>

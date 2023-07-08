@@ -1,4 +1,5 @@
-import style from './TrainerProfile.module.css'
+import SideBar from '../../components/sidebar/SideBar'
+import style from './HRProfile.module.css'
 import user from '../../assets/images/hrprofile/user.svg'
 import selectImg from '../../assets/images/hrprofile/selectImg.svg'
 import larr from '../../assets/images/hrprofile/larr.svg'
@@ -6,13 +7,12 @@ import lock from '../../assets/images/hrprofile/lock.svg'
 import mail from '../../assets/images/hrprofile/mail.svg'
 import man from '../../assets/images/hrprofile/man.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
-import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
+import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
-import Offcanvas from '../../components/offcanvas/Offcanvas'
 import { useState } from 'react'
 
 
-function TrainerProfile() {
+function HRProfile() {
     const [offcanvas, setOffcanvas] = useState(false)
 
     return (
@@ -21,12 +21,12 @@ function TrainerProfile() {
                 <Navbar func={() => {
                     setOffcanvas(!offcanvas)
                 }} />
-                <Offcanvas status={offcanvas} />
-                <SidebarForTrainerpor />
+                <SideBar />
+                <HROffcanvas status={offcanvas} />
             </div>
             <div className={style.profile}>
-                <ProfileUser />
-                <p>Trainer Profile</p>
+                <ProfileUser path='/hr/profile' />
+                <p>HR Profile</p>
                 <div className={style.hrInfo}>
                     <div>
                         <span></span>
@@ -86,7 +86,7 @@ function TrainerProfile() {
                         <div className={style.card2headers}>
                             <p>Role</p>
                             <img src={larr} alt="" />
-                            <p>Trainer</p>
+                            <p>HR</p>
                         </div>
                         <div className={style.card2body}>
                             <input type="text" placeholder='Change password' />
@@ -100,4 +100,4 @@ function TrainerProfile() {
     )
 }
 
-export default TrainerProfile
+export default HRProfile

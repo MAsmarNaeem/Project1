@@ -3,7 +3,6 @@
   width: 100%;
 }
 
-
 .hrInfo {
   width: 95%;
   margin: auto;
@@ -156,16 +155,15 @@ p {
   margin-top: 1.19rem;
   border-radius: 0.4375rem;
   border: 1px solid #dadada;
-  background: #FFFF;
 }
 
 .card1headers {
   border-bottom: 1px solid #e1e1e1;
   height: 5.31rem;
   display: flex;
+  background: #fbfbfb;
   justify-content: flex-start;
   align-items: center;
-  background: #fbfbfb;
 }
 
 .card1headers > div:nth-child(1) {
@@ -358,9 +356,6 @@ p {
   .card2 {
     width: 50%;
   }
-  /* .cardParent {
-    margin-right: 1rem;
-  } */
 }
 @media (max-width: 1150px) {
   .card1 {
@@ -375,7 +370,6 @@ p {
     padding-bottom: 1rem;
   }
   .cardParent {
-    /* margin-right: 1rem; */
     flex-direction: column;
   }
 }
@@ -412,13 +406,5 @@ p {
   }
   .card2headers img:nth-child(2) {
     width: 10rem;
-  }
-}
-
-
-@media (max-width: 390px) {
-  .card2headers img:nth-child(2) {
-    width: 7rem;
-   
   }
 }

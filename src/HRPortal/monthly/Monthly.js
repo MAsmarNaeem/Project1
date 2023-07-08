@@ -1,58 +1,50 @@
-import style from './Mytasks.module.css'
+import style from './Monthly.module.css'
+import SideBar from '../../components/sidebar/SideBar'
 import search from '../../assets/images/employees/Search.svg'
 import add from '../../assets/images/employees/Application Add.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
-import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 import { useNavigate } from 'react-router-dom'
-import Offcanvas from '../../components/offcanvas/Offcanvas'
-import Navbar from '../../components/navbar/Navbar'
-import { useState } from 'react'
-function MyTasks() {
-    let data = [
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-        'Intro to Computing',
-    ]
-    let next = 'Next page >>'
-    const [offcanvas, setOffcanvas] = useState(false)
+function Monthly() {
     const navigate = useNavigate()
+    const data = [
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+        'January',
+    ];
+    let next = 'Next page >>'
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-                <SidebarForTrainerpor />
-                <Navbar func={() => {
-                    setOffcanvas(!offcanvas)
-                }} />
-                <Offcanvas status={offcanvas} />
+                <SideBar />
             </div>
-            <ProfileUser path='/trainer/profile' />
+                <ProfileUser />
             <div className={style.subparent}>
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
-                        <input type="text" placeholder='Search by name ' />
+                        <input type="text" placeholder='Search Employee by name or id' />
                     </div>
                 </div>
                 <div className={style.tableParent2}>
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Trainer Name</td>
+                            <td>Month</td>
                             <td>Action</td>
                         </tr>
                         {
-                            data.map((year, i) => {
+                            data.map((month, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
                                         <td>
-                                            <p>{year}</p>
+                                            <p>{month}</p>
                                         </td>
-                                        <td ><button onClick={() => {
-                                            navigate('/trainer/traininginfo')
+                                        <td ><button onClick={()=>{
+                                            navigate('/hr/trainingweeks')
                                         }} className={style.view}>
                                             View
                                         </button></td>
@@ -73,4 +65,4 @@ function MyTasks() {
     )
 }
 
-export default MyTasks
+export default Monthly
