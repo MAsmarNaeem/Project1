@@ -392,6 +392,20 @@
   margin-top: 173px;
   margin-left: 245px;
 }
+@media (max-width: 550px) {
+  .alert {
+    width: 95%;
+    margin: auto;
+  }
+  .alertbtns {
+    margin-top: 173px;
+    margin-left: 0;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .btn1 {
   width: 111px;

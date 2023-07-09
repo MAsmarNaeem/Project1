@@ -381,7 +381,7 @@
 }
 .alert {
   width: 522px;
-  height: 301px;
+  height: 344px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #fff;
@@ -389,32 +389,41 @@
 }
 
 .msg {
-  margin-top: 20px;
-  margin-left: 17px;
   color: #000;
   font-family: Poppins;
-  font-size: 17px;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.msg2 {
+  color: #000;
+  margin-left: 30px;
+  margin-top: 14;
+  font-family: Poppins;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 .alertbtns {
-  margin-top: 173px;
-  margin-left: 245px;
+width: 90%;
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+margin-top: 153px;
 }
 
 @media (max-width: 550px) {
   .alert {
     width: 95%;
     margin: auto;
-    height: 250px;
   }
-  .alertbtns{
-    margin-left: 0px;
-    margin-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .msg{
+    font-size: 30px;
   }
 }
 .btn1 {

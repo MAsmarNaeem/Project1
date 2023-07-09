@@ -43,7 +43,7 @@ function ShowPersonalRec() {
                         </div>
                         <div className={style.inputParent}>
                             <div className={style.para}>
-                                <p>Minimum Qualification Required</p>
+                                <p>Minimum Experience Required</p>
                             </div>
                             <div>
                                 <input type="text" value='2 Years' />

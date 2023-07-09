@@ -164,10 +164,10 @@ function Info() {
                 alert ?
                     <div class={style.alertparent}>
                         <div class={style.alert}>
-                            <p class={style.msg}>Do you really want to Submit it?</p>
+                            <p class={style.msg}>Evaluation Criteria</p>
+                            <p class={style.msg2}>Hi this is your song</p>
                             <div className={style.alertbtns}>
-                                <button onClick={alertManager} className={style.btn1}>Submit</button>
-                                <button onClick={alertManager} className={style.btn2}>Cencel</button>
+                                <button onClick={alertManager} className={style.btn1}>Cencel</button>
 
                             </div>
                         </div>
