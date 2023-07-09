@@ -43,7 +43,7 @@ function PersonalRec() {
                         </div>
                         <div className={style.inputParent}>
                             <div className={style.para}>
-                                <p>Minimum Qualification Required</p>
+                                <p>Minimum Experience Required</p>
                             </div>
                             <div>
                                 <input type="text" />
@@ -84,6 +84,22 @@ function PersonalRec() {
                             <div>
                                 <input type="text" />
 
+                            </div>
+                        </div>
+                        <div className={style.inputParent}>
+                            <div className={style.para}>
+                                <p>Others</p>
+                            </div>
+                            <div>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div className={style.inputParent}>
+                            <div className={style.para}>
+                                <p>Request Initiated by</p>
+                            </div>
+                            <div>
+                                <input type="text" />
                             </div>
                         </div>
                     </div>

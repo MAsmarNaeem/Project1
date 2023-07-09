@@ -9,7 +9,7 @@ import calender from '../../assets/images/employeeProfile/Calendar.svg'
 import office from '../../assets/images/employeeProfile/Office.svg'
 import cnic from '../../assets/images/employeeProfile/UserCard.svg'
 import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import Offcanvas from '../../components/offcanvas/Offcanvas'
@@ -19,6 +19,20 @@ function Info() {
     const [alert, setalert] = useState(false)
     const alertManager = () => {
         setalert(!alert)
+    }
+    const fileInputRef = useRef(null);
+
+    const uploadBtnH = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const files = event.target.files;
+        // Process the selected file(s) or perform any desired actions
+        for (let i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            // Perform further actions with the file(s) such as uploading, validating, etc.
+        }
     }
     const navigate = useNavigate()
     const [offcanvas, setOffcanvas] = useState(false)
@@ -127,7 +141,12 @@ function Info() {
                             </div>
                         </div>
                         <div className={style.cardsBtn}>
-                            <div className={style.cardbtn1}><p className={style.btntxt}>Images</p><button>Upload</button></div>
+                            <div className={style.cardbtn1}><p className={style.btntxt}>Images</p> <input
+                                type="file"
+                                ref={fileInputRef}
+                                style={{ display: 'none' }}
+                                onChange={handleFileChange}
+                            /><button onClick={uploadBtnH}>Upload</button></div>
                             <div className={style.cardbtn2}><p className={style.btntxt}>Training Material</p><button>Download</button></div>
 
                         </div>

@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 const DropDowns = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [indicator, setIndicator] = useState('a');
+    const [indicator, setIndicator] = useState('');
     const navigate = useNavigate()
 
     const toggleDropdown = () => {
@@ -41,11 +41,11 @@ const DropDowns = () => {
                 </div>
                 {isOpen ? <div className={style.optsParent}>
                     <ul className={style.opts}>
-                        <li className={indicator === 'a' ? style.checkedli : null} onClick={() => indicatorManager('/hr/employees')}>
+                        <li className={indicator === '/hr/employees' ? style.checkedli : null} onClick={() => indicatorManager('/hr/employees')}>
                             <img src={user} alt="" />
                             Employees
                         </li>
-                        <li className={indicator === 'b' ? style.checkedli : null} onClick={() => indicatorManager('/hr/trainings')}>
+                        <li className={indicator === '/hr/trainings' ? style.checkedli : null} onClick={() => indicatorManager('/hr/trainings')}>
                             <img src={copyPaste} alt="" />
                             Training Records</li>
                         <li className={indicator === 'c' ? style.checkedli : null} onClick={() => indicatorManager('/hr/trainingsref')}>

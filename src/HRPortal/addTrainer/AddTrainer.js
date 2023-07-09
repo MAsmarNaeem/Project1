@@ -8,10 +8,25 @@ import Office from '../../assets/images/employeeProfile/Office.svg'
 import msg from '../../assets/images/hrprofile/mail.svg'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 function AddTrainer() {
     const [offcanvas, setOffcanvas] = useState(false)
+    const fileInputRef = useRef(null);
+
+    const uploadBtnH = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const files = event.target.files;
+        // Process the selected file(s) or perform any desired actions
+        for (let i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            // Perform further actions with the file(s) such as uploading, validating, etc.
+        }
+    }
+
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
@@ -37,7 +52,13 @@ function AddTrainer() {
                 <div className={style.profile}>
                     <img src={profile} alt="" />
                     <div>
-                        <img src={edit} alt="" />
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            style={{ display: 'none' }}
+                            onChange={handleFileChange}
+                        />
+                        <img onClick={uploadBtnH} src={edit} alt="" />
                     </div>
                 </div>
                 <div className={style.sec1}>
@@ -62,8 +83,14 @@ function AddTrainer() {
                         <img style={{ width: '20px', height: '20px', cursor: 'pointer' }} src={copyP} alt="" />
                     </div>
                     <div className={style.btns}>
-                        <button>Upload Documents</button>
+                        <button onClick={uploadBtnH}>Upload Documents</button>
                         <button>Submit</button>
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            style={{ display: 'none' }}
+                            onChange={handleFileChange}
+                        />
                     </div>
                 </div>
             </div>

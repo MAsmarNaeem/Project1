@@ -9,6 +9,8 @@
 .subparent {
   width: 82.5%;
   margin-top: 102px;
+  margin-bottom: 1rem;
+
 }
 .headers {
   display: flex;
@@ -26,6 +28,8 @@
   display: flex;
   gap: 5px;
 }
+
+
 
 .spans > span {
   display: block;
@@ -237,6 +241,30 @@
     height: auto;
   }
 }
+@media (max-width: 1350px) {
+  .formDivider{
+    gap: 1rem;
+  }
+  .sec1{
+    width: 50%;
+  }
+  .sec2{
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .formDivider{
+    flex-direction: column;
+  }
+  .sec1{
+    width:90%;
+  }
+  .sec2{
+    width: 90%;
+    margin: auto;
+  }
+}
 
 .bg {
   background-color: #fafafa !important;
@@ -340,6 +368,15 @@
     margin-top: 40px;
   }
   .sec2 {
-    margin-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .headers {
+    margin-top: 12rem;
+  }
+  .sec1{
+    margin-left: auto;
+    margin-right: auto;
+
   }
 }

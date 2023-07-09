@@ -36,6 +36,8 @@
   border-radius: 10px 10px 0px 0px;
   background: #ee6a5f;
 }
+
+
 .spans {
   display: flex;
   gap: 5px;
@@ -110,14 +112,31 @@
 .card1body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
+  margin: auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+}
+@media (max-width: 1100px) {
+  .headers {
+    gap: 12px;
+  }
+  .card1body {
+    width: 90%;
+  }
+}
+@media (max-width: 1000px) {
+  .formDivider{
+    flex-direction: column;
+  }
+  .sec2 {
+    margin-right: 0px;
+    margin-top: 1rem;
+  }
 }
 .inputp {
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
-  width: 404px;
   height: 56px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -143,7 +162,7 @@
   margin: auto;
   display: flex;
   height: 155px;
-  padding: 18px 406px 110px 39px;
+  padding: 18px 20px 110px 39px;
   align-items: center;
   flex-shrink: 0;
   border-radius: 0px 0px 15px 15px;
@@ -256,8 +275,9 @@
     width: 100%;
     margin-top: 40px;
   }
-  .sec2 {
-    margin-right: 0px;
+
+  .formDivider{
+    margin-top: 12rem;
   }
 }
 
@@ -269,5 +289,23 @@
   font-weight: 600;
   line-height: normal;
   margin-top: 15px;
-  margin-left: 72px;
+  /* margin-left: 72px; */
+}
+@media (max-width: 500px) {
+  .card1body {
+    width: 90%;
+  }
+  .checks {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+  .sec1p2 > div:nth-child(3){
+    height: auto;
+
+  }
+  .sec1p2 div:nth-child(3) {
+    padding-bottom: 1rem;
+  }
 }

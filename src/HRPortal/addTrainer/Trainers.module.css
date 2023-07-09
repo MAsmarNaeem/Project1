@@ -80,7 +80,7 @@
   margin-left: 18px;
 }
 .tableParent2 {
-  width:98%;
+  width: 98%;
   height: 620px;
   margin: auto;
   margin-top: 13px;
@@ -198,7 +198,7 @@
   background: var(--foundation-blue-b-20, #f5f6f7);
 }
 
-.download{
+.download {
   color: #ee6a5f;
   font-size: 14px;
   font-family: Poppins;
@@ -229,7 +229,12 @@
   line-height: normal;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   align-items: center;
+}
+.view:hover {
+  background-color: #2b5ce6;
+  color: #fff;
 }
 .next {
   display: flex;
@@ -238,6 +243,11 @@
   margin-top: 32px;
   margin-right: 37px;
   margin-bottom: 28px;
+}
+@media (max-width: 750px) {
+  .sec1 {
+    padding: 12px 0px 12px 0px !important;
+  }
 }
 .next > button {
   width: 108px;
@@ -253,6 +263,10 @@
   background: #fff;
   border-radius: 5px;
   border: 1px solid #7e7e7e;
+}
+.next > button:hover {
+  background-color: #707070;
+  color: #fff;
 }
 
 @media (max-width: 1350px) {

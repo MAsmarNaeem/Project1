@@ -15,13 +15,13 @@ function AddPerson() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-            <Navbar func={() => {
-                        setOffcanvas(!offcanvas)
-                    }} />
-                    <SideBar />
-                    <HROffcanvas path='/hr/profile' status={offcanvas} />
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <SideBar />
+                <HROffcanvas path='/hr/profile' status={offcanvas} />
             </div>
-            <ProfileUser path='/hr/profile'/>
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.formDivider}>
                     <div className={style.sec1}>
@@ -38,7 +38,7 @@ function AddPerson() {
 
                         <div className={style.card1bodyp}>
                             <div className={style.card1body}>
-                                <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
+                                <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Station</p>
                                 </div>
                                 <div className={style.inputp}>
@@ -46,7 +46,7 @@ function AddPerson() {
                                 </div>
                             </div>
                             <div className={style.card1body}>
-                                <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
+                                <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Job Title</p>
                                 </div>
                                 <div className={style.inputp}>
@@ -54,7 +54,7 @@ function AddPerson() {
                                 </div>
                             </div>
                             <div className={style.card1body}>
-                                <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
+                                <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Department</p>
                                 </div>
                                 <div className={style.inputp}>
@@ -62,7 +62,7 @@ function AddPerson() {
                                 </div>
                             </div>
                             <div className={style.card1body}>
-                                <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
+                                <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Section</p>
                                 </div>
                                 <div className={style.inputp}>
@@ -70,7 +70,7 @@ function AddPerson() {
                                 </div>
                             </div>
                             <div className={style.card1body}>
-                                <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
+                                <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Supervisor</p>
                                 </div>
                                 <div className={style.inputp}>

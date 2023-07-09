@@ -47,7 +47,7 @@
   line-height: normal;
   border: 0;
   outline: 0;
-  width: 60%;
+  width: 100%;
 }
 
 .sec2 {
@@ -216,6 +216,11 @@
 .click:hover {
   background-color: #2b5ce6;
   color: #fff;
+}
+@media (max-width: 750px) {
+  .sec1 {
+    padding: 12px 0px 12px 0px !important;
+  }
 }
 .simpleContent {
   color: #000;

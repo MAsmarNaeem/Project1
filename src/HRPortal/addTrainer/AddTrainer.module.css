@@ -13,7 +13,6 @@
   height: 938px;
   border-radius: 0px 0px 10px 10px;
 background: #FAFAFA;
-margin-bottom: 17px;
 }
 
 .headers {
@@ -88,6 +87,7 @@ margin-bottom: 17px;
   width: 100%;
   background: #fafafa;
   padding-top: 0px;
+  margin-bottom: 10px !important;
 }
 .sec1 div {
   border-radius: 10px;
@@ -96,12 +96,23 @@ margin-bottom: 17px;
   margin: auto;
   margin-bottom: 15px;
 }
+@media (max-width: 1200px) {
+  .sec1 div {
+    width: 80%;
+  }
+}
 .sec1 input {
   padding: 18px 22px;
   border: 0;
   outline: 0;
   border-radius: 10px;
   width: 90%;
+  color: #898989;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .sec1 div:nth-child(5) {
@@ -121,6 +132,15 @@ margin-bottom: 17px;
   padding-right: 0 !important;
   gap: 1rem;
   background: #fafafa !important;
+  padding-bottom:30px ;
+}
+
+@media (max-width: 500px) {
+  .btns {
+    justify-content: center;
+    padding-bottom:30px ;
+    margin-bottom: 10px;
+  }
 }
 
 .btns button:nth-child(1) {
@@ -129,29 +149,39 @@ margin-bottom: 17px;
   flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #ee6a5f;
+  background: #fff;
   color: #ee6a5f;
   font-size: 17px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background: #fff;
 }
 .btns button:nth-child(2) {
   width: 156px;
   height: 58px;
   flex-shrink: 0;
   color: #fff;
+  background: #ee6a5f;
   font-size: 17px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   border-radius: 10px;
-  background: #ee6a5f;
   border: 0;
 }
 
+.btns button:nth-child(1):hover{
+  color: #fff;
+  background: #ee6a5f;
+}
+
+.btns button:nth-child(2):hover{
+  border: 1px solid #ee6a5f;
+  background: #fff;
+  color: #ee6a5f;
+}
 @media (max-width: 1350px) {
   .sidebar {
     width: 20%;

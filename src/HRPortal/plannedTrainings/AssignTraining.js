@@ -9,7 +9,7 @@ import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 function AssignTrainings() {
     const [offcanvas, setOffcanvas] = useState(false)
-    let sampleData =   {
+    let sampleData = {
         img: avatar,
         code: '3310',
         name: 'Tanner Finsha',
@@ -31,13 +31,13 @@ function AssignTrainings() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-            <Navbar func={() => {
-                        setOffcanvas(!offcanvas)
-                    }} />
-                    <SideBar />
-                    <HROffcanvas status={offcanvas} />
+                <Navbar func={() => {
+                    setOffcanvas(!offcanvas)
+                }} />
+                <SideBar />
+                <HROffcanvas status={offcanvas} />
             </div>
-            <ProfileUser path='/hr/profile'/>
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
@@ -63,10 +63,10 @@ function AssignTrainings() {
                                 return (
                                     <tr className={style.tablebody} key={i}>
                                         <td><input type="checkbox" /></td>
-                                        <td className={style.textStyle1}>
+                                        <td>
                                             <p>{employee.code}</p>
                                         </td>
-                                        <td className={style.textStyle2}><img src={employee.img} alt="" /> {employee.name}</td>
+                                        <td className={style.textStyle1}><img src={employee.img} alt="" /> {employee.name}</td>
                                         <td className={style.textStyle2}>{employee.cnic}</td>
                                         <td className={style.textStyle2}>{employee.phonen}</td>
                                         <td className={style.textStyle3}>{employee.email}</td>

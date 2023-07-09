@@ -12,13 +12,13 @@ function ShowAddPersom() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-            <Navbar func={() => {
+                <Navbar func={() => {
                     setOffcanvas(!offcanvas)
                 }} />
                 <HROffcanvas path='/hr/profile' status={offcanvas} />
                 <SideBar />
             </div>
-            <ProfileUser path='/hr/profile'/>
+            <ProfileUser path='/hr/profile' />
             <div className={style.subparent}>
                 <div className={style.formDivider}>
                     <div className={style.sec1}>
@@ -122,14 +122,14 @@ function ShowAddPersom() {
                                         <input type="text" />
                                     </div>
                                 </div>
-                            <p className={style.salary}>Basic Salary</p>
+                                <p className={`${style.salary} ${style.card1body}`}>Basic Salary</p>
                             </div>
 
                         </div>
                     </div>
                 </div>
                 <div className={style.btn}>
-                    <button onClick={()=>{
+                    <button onClick={() => {
                         navigate('/hr/showpersonalrec')
                     }}>Next Page</button>
                 </div>

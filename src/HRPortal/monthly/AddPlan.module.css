@@ -13,7 +13,6 @@
 .headers {
   display: flex;
   width: 85%;
-
   height: 75px;
   align-items: center;
   gap: 37px;
@@ -66,6 +65,8 @@
   display: flex;
   background: #fafafa;
 }
+
+
 .sec1,
 .sec2 {
   width: 100%;
@@ -122,6 +123,17 @@
   align-items: flex-start;
   flex-direction: column;
 }
+@media (max-width: 650px) {
+  .formDivider{
+    flex-direction: column;
+  }
+  .headers {
+    gap: 12px;
+  }
+  .inputParent {
+    width: 85%;
+  }
+}
 .inputParent > div:nth-child(2) {
   background: #fff;
   display: flex;
@@ -144,7 +156,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 .dropdown {
   padding: 15px 0 15px 0px;
@@ -202,6 +214,18 @@
   background: #fff;
   border: 1px solid #ee6a5f;
 }
+
+@media (max-width: 1150px) {
+.headers {
+  width: 95%;
+}
+.formDivider {
+  width: 95%;
+}
+.btn {
+  width: 95%;
+}
+}
 @media (max-width: 1350px) {
   .sidebar {
     width: 20%;
@@ -236,5 +260,8 @@
   }
   .sec2 {
     margin-right: 0px;
+  }
+  .headers {
+    margin-top: 12rem;
   }
 }

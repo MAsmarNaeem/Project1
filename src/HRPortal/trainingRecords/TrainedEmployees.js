@@ -37,7 +37,7 @@ function TrainedEmployees() {
     return (
         <div className={style.parent}>
             <div className={style.sidebar}>
-            <Navbar func={() => {
+                <Navbar func={() => {
                     setOffcanvas(!offcanvas)
                 }} />
                 <SideBar />
@@ -45,7 +45,7 @@ function TrainedEmployees() {
             </div>
             <div className={style.subparent}>
                 <p className={style.redtxt}>Employees who are getting trained</p>
-                <ProfileUser path='/hr/profile'/>
+                <ProfileUser path='/hr/profile' />
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
@@ -77,7 +77,7 @@ function TrainedEmployees() {
                                         <td>{employee.cnic}</td>
                                         <td>{employee.phonen}</td>
                                         <td>{employee.email}</td>
-                                        <td>{employee.status}</td>
+                                        <td className={employee.status === 'pending' ? style.pending : null}>{employee.status}</td>
                                         <td>{employee.attendence ? <Switch state={employee.attendence} /> : <Switch state={employee.attendence} />}</td>
                                         <td>
                                             {employee.pass ? <Switch state={employee.pass} /> : <Switch state={employee.pass} />}

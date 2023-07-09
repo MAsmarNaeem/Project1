@@ -88,20 +88,32 @@
   margin: 21px;
 }
 .sec1 input {
-  padding: 18px 22px;
+  padding: 18px 0px;
   border: 0;
   outline: 0;
   border-radius: 10px;
   width: 80%;
+  color: #898989;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 .fortextarea {
   border: 0;
-  padding: 10px 0px;
+  padding: 18px 0px;
   outline: 0;
   border-radius: 10px;
   background: #fff;
   height: 194px !important;
   width: 80%;
+  color: #898989;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .btns {
@@ -112,6 +124,12 @@
   flex-wrap: wrap;
   padding-right: 0 !important;
   gap: 1rem;
+}
+
+@media (max-width: 550px) {
+  .btns {
+    justify-content: center !important;
+  }
 }
 
 .btns button:nth-child(1) {
@@ -264,4 +282,14 @@
   font-weight: 400;
   margin-left: 28px;
   line-height: normal;
+}
+
+@media (max-width: 500px) {
+  .alert {
+    width: 95%;
+  }
+  .alertbtns {
+    margin-top: 74px;
+    margin-left: 37px;
+  }
 }

@@ -110,14 +110,14 @@
 .card1body {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
+  margin: auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .inputp {
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
-  width: 404px;
   height: 56px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -131,6 +131,12 @@
   height: 100%;
   text-align: center;
   padding: 0 12px;
+}
+
+@media (max-width: 1000px) {
+  .formDivider {
+    flex-direction: column;
+  }
 }
 @media (max-width: 1350px) {
   .sidebar {
@@ -152,6 +158,7 @@
 .checksParent {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 93%;
   margin: auto;
   padding: 0 19px 15px 15px;
@@ -232,5 +239,26 @@
   }
   .sec2 {
     margin-right: 0px;
+  }
+  .formDivider {
+    margin-top: 12rem;
+  }
+}
+@media (max-width: 500px) {
+  .card1body {
+    width: 90%;
+  }
+  .checks {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+  .sec1p2 > div:nth-child(3){
+    height: auto;
+
+  }
+  .sec1p2 div:nth-child(3) {
+    padding-bottom: 1rem;
   }
 }

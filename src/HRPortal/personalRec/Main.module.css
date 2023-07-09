@@ -47,7 +47,7 @@
   line-height: normal;
   border: 0;
   outline: 0;
-  width: 60%;
+  width: 100%;
 }
 
 .sec2 {
@@ -85,7 +85,11 @@
   margin: auto;
   margin-top: 13px;
 }
-
+@media (max-width: 750px) {
+  .sec1 {
+    padding: 12px 0px 12px 0px !important;
+  }
+}
 
 .table {
   width: 600px;

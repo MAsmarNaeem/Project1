@@ -52,6 +52,7 @@ function PlannedTrainings() {
                         <img src={search} alt="" />
                         <input type="text" placeholder='Search Training by name' />
                     </div>
+                   
                 </div>
                 <div className={style.tableParent}>
 
@@ -77,7 +78,7 @@ function PlannedTrainings() {
                                         <td className={style.textStyle3}>{employee.Time}</td>
                                         <td className={style.textStyle3}>{employee.department}</td>
                                         <td ><button onClick={() => {
-                                            navigate('/hr/traininginfo')
+                                            navigate('/hr/training/info')
                                         }} className={style.viewBtn}>View</button>
                                         </td>
                                         <td ><button onClick={() => {
