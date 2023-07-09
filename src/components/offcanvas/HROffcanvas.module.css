@@ -37,12 +37,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #fafafa;
+      background: #fafafa ;
     }
     .offcanvas {
       width: 70%;
       height: auto;
-      background: #fafafa;
+      background: #fafafa ;
       height: 90vh;
       padding: 15px;
       transition: 0.5s;

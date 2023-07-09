@@ -9,11 +9,25 @@ import man from '../../assets/images/hrprofile/man.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 
 function HRProfile() {
     const [offcanvas, setOffcanvas] = useState(false)
+    const fileInputRef = useRef(null);
+
+    const uploadBtnH = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const files = event.target.files;
+        // Process the selected file(s) or perform any desired actions
+        for (let i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            // Perform further actions with the file(s) such as uploading, validating, etc.
+        }
+    }
 
     return (
         <div className={style.parent}>
@@ -41,7 +55,13 @@ function HRProfile() {
                         <img src={user} alt="" />
                     </div>
                     <div>
-                        <img src={selectImg} alt="" />
+                        <img onClick={uploadBtnH} src={selectImg} alt="" />
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            style={{ display: 'none' }}
+                            onChange={handleFileChange}
+                        />
                     </div>
                 </div>
                 <div className={style.cardParent}>

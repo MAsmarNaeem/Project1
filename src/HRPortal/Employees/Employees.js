@@ -80,22 +80,22 @@ function Employees() {
                             data.map((employee, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
-                                        <td>
+                                        <td className={style.txtStyle1}>
                                             <p>{employee.code}</p>
                                         </td>
-                                        <td><img src={employee.img} alt="" /> {employee.name}</td>
-                                        <td>{employee.cnic}</td>
-                                        <td>{employee.phonen}</td>
-                                        <td>{employee.email}</td>
-                                        <td>{employee.dep}</td>
-                                        <td>{employee.status}</td>
+                                        <td className={style.txtStyle2}><img src={employee.img} alt="" /> {employee.name}</td>
+                                        <td className={style.txtStyle4}>{employee.cnic}</td>
+                                        <td className={style.txtStyle4}>{employee.phonen}</td>
+                                        <td className={style.txtStyle3}>{employee.email}</td>
+                                        <td className={style.txtStyle4}>{employee.dep}</td>
+                                        <td className={style.txtStyle5}>{employee.status}</td>
                                         <td>
-                                            <button onClick={pushEmployeeProfile}>
+                                            <button className={style.viewBtn} onClick={pushEmployeeProfile}>
                                                 View
                                             </button>
                                         </td>
                                         <td>
-                                            <button>
+                                            <button className={style.downloadBtn}>
                                                 Download
                                             </button>
                                         </td>

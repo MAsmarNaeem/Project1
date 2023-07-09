@@ -9,17 +9,33 @@ import Office from '../../assets/images/employeeProfile/Office.svg'
 import UserCard from '../../assets/images/employeeProfile/UserCard.svg'
 import Calendar from '../../assets/images/employeeProfile/Calendar.svg'
 import man from '../../assets/images/hrprofile/man.svg'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import style from '../HRProfile/HRProfile.module.css'
 import style2 from './EmployeeProfile.module.css'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
+import { useNavigate } from 'react-router-dom'
 
 
 function EmployeeProfile() {
     const [offcanvas, setOffcanvas] = useState(false)
     const [data, setdata] = useState(['IT', 'IT', 'IT'])
+    const fileInputRef = useRef(null);
+
+    const uploadBtnH = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const files = event.target.files;
+        // Process the selected file(s) or perform any desired actions
+        for (let i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            // Perform further actions with the file(s) such as uploading, validating, etc.
+        }
+    }
+    const navigate = useNavigate()
     return (
         <div className={style.parent}>
             <div className={`${style.sidebar}`}>
@@ -30,7 +46,7 @@ function EmployeeProfile() {
                 <HROffcanvas status={offcanvas} />
             </div>
             <div className={style.profile}>
-                <ProfileUser path='/hr/profile'/>
+                <ProfileUser path='/hr/profile' />
                 <p>Employee Profile</p>
                 <div className={style.hrInfo}>
                     <div>
@@ -46,7 +62,13 @@ function EmployeeProfile() {
                         <img src={user} alt="" />
                     </div>
                     <div>
-                        <img src={selectImg} alt="" />
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            style={{ display: 'none' }}
+                            onChange={handleFileChange}
+                        />
+                        <img onClick={uploadBtnH} src={selectImg} alt="" />
                     </div>
                 </div>
                 <div className={style2.cardParent}>
@@ -68,8 +90,8 @@ function EmployeeProfile() {
                                 <div>
                                     <img src={man} alt="" />
                                     <div>
-                                        <p className={style2.card1para}>Name</p>
-                                        <p className={style2.card1para2}>Albert Robin</p>
+                                        <p className={style2.card1para}>Employee Code</p>
+                                        <p className={style2.card1para2}>E002</p>
                                     </div>
                                 </div>
                                 <div>
@@ -151,7 +173,9 @@ function EmployeeProfile() {
                                             <tb className={style2.tablebody}>
                                                 <td className={style2.index}>{i + 1}</td>
                                                 <td className={style2.training}>{training}</td>
-                                                <td className={style2.clicker}>Details</td>
+                                                <td onClick={()=>{
+                                                    navigate('/hr/training/info')
+                                                }} className={style2.clicker}>Details</td>
                                             </tb>
                                         </tr>
                                     )

@@ -4,7 +4,6 @@
   border-radius: 0.4375rem;
   padding-bottom: 100px;
   background: #fff;
-
 }
 
 .card1headers {
@@ -14,7 +13,6 @@
   justify-content: flex-start;
   align-items: center;
   background: #fbfbfb;
-
 }
 
 .card1headers > div:nth-child(1) {
@@ -60,14 +58,7 @@
   display: flex;
   border-radius: 0.4375rem;
 }
-@media (max-width: 475px) {
-  .card1body {
-    flex-direction: column;
-  }
-  .card1body > div:nth-child(2){
-    margin-top: 3rem;
-  }
-}
+
 .card1body > div {
   padding-left: 1.63rem;
   background: #fff;
@@ -300,9 +291,20 @@
     flex-direction: column;
   }
 }
-@media (max-width: 1375px) {
+@media (min-width: 550px) {
   .card1body > div {
     width: 50% !important;
+  }
+}
+@media (max-width: 550px) {
+  .card1body {
+    flex-direction: column;
+  }
+  .card1body > div:nth-child(2) {
+    margin-top: 3rem;
+  }
+  .card1body > div {
+    width: 100% !important;
   }
 }
 
@@ -342,13 +344,13 @@
   align-items: center;
   gap: 27px;
   flex-wrap: wrap;
-  align-self:flex-end ;
+  align-self: flex-end;
   justify-self: flex-end;
   margin-bottom: 25px;
 }
 
 @media (max-width: 1150px) {
-  .btns{
+  .btns {
     margin-top: 2rem;
   }
 }
@@ -381,17 +383,17 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background:#FFF;
+  background: #fff;
 }
 
-  .btns > button:nth-child(1):hover {
-    color: #ee6a5f;
+.btns > button:nth-child(1):hover {
+  color: #ee6a5f;
   transition: 0.3s;
   border: 1px solid #ee6a5f;
-    background: #fff;
-  }
-  .btns > button:nth-child(2):hover {
+  background: #fff;
+}
+.btns > button:nth-child(2):hover {
   transition: 0.3s;
   background: #ee6a5f;
-    color: #fff;
-  }
+  color: #fff;
+}

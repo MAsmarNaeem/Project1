@@ -107,12 +107,18 @@
 }
 .sec1 input,
 .sec2 input {
-  padding: 18px 22px;
+  padding: 14px 22px;
   border: 0;
   outline: 0;
   border-radius: 10px;
   background: #fff;
   width: 90%;
+  color: #898989;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .sec2 {
   width: 45%;
@@ -170,7 +176,7 @@
   background: #fafafa !important;
 }
 
-.btns button:nth-child(1) {
+.uploadBtn {
   width: 246px;
   height: 58px;
   flex-shrink: 0;
@@ -185,12 +191,7 @@
   background: #fff;
 }
 
-@media (max-width: 950px) {
-  .btns button:nth-child(1) {
-    width: 100%;
-  }
-}
-.btns button:nth-child(2) {
+.submit {
   width: 156px;
   height: 58px;
   flex-shrink: 0;
@@ -204,11 +205,11 @@
   background: #ee6a5f;
   border: 0;
 }
-.btns button:nth-child(1):hover {
+.uploadBtn:hover {
   background: #ee6a5f;
   color: #fff;
 }
-.btns button:nth-child(2):hover {
+.submit:hover {
   border: 1px solid #ee6a5f;
   background: #fff;
   color: #ee6a5f;
@@ -289,6 +290,7 @@
   border-radius: 10px;
   background: #fff;
 }
+
 .msg {
   margin-top: 25px;
   margin-left: 37px;
@@ -302,6 +304,15 @@
 .alertbtns {
   margin-top: 84px;
   margin-left: 190px;
+}
+@media (max-width: 500px) {
+  .alert {
+    width: 95%;
+  }
+  .alertbtns {
+    margin-top: 74px;
+    margin-left: 37px;
+  }
 }
 
 .btn1 {
@@ -328,6 +339,12 @@
   background: #ee6a5f;
   color: #fff;
 }
+
+.inputDate {
+  width: 100% !important;
+  padding-right: 0% !important;
+}
+
 .btn2 {
   width: 95px;
   height: 38px;
@@ -342,4 +359,26 @@
   font-weight: 400;
   margin-left: 28px;
   line-height: normal;
+}
+
+.resbtns {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fafafa;
+  padding-bottom: 45px;
+  display: none;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+  .resbtns {
+    display: flex;
+  }
+  .btns {
+    display: none !important;
+  }
 }
