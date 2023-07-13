@@ -30,6 +30,11 @@ import TrainingsRef from './HRPortal/trainings/TrainingsRef';
 import PlannedTrainings from './HRPortal/plannedTrainings/PlannedTrainings';
 import Main from './HRPortal/personalRec/Main';
 import Trainers from './HRPortal/addTrainer/Trainers';
+import TechWelcome from './TechPortal/welcomePage/Wellcome';
+import Machines from './TechPortal/machines/Machines';
+import Devices from './TechPortal/devices/Devices';
+import AddMachine from './TechPortal/machines/AddMachine';
+import AddDevices from './TechPortal/devices/AddDevices';
 
 function App() {
   return (
@@ -51,7 +56,6 @@ function App() {
         <Route path="/hr/addtraining" element={<AddTraining />} />
         <Route path="/hr/planned/trainings" element={<PlannedTrainings />} />
         <Route path="/hr/assign/trainings" element={<AssignTrainings />} />
-        {/* Do Working */}
         <Route path="/hr/training/info" element={<ViewTrainings />} />
         {/* personalRec */}
         <Route path="/hr/personalrec" element={<Main />} />
@@ -68,7 +72,6 @@ function App() {
         <Route path="/hr/addmonthlyplan" element={<AddPlan />} />
         {/* Trainer */}
         <Route path="/hr/addtrainer" element={<AddTrainer />} />
-        {/* Do Working */}
         <Route path="/hr/trainers" element={<Trainers />} />
         {/* --->Trainer Portal<--- */}
         <Route path="/trainer" element={<Welcome />} />
@@ -76,6 +79,14 @@ function App() {
         <Route path="/trainer/profile" element={<TrainerProfile />} />
         <Route path="/trainer/traininginfo" element={<Info />} />
         <Route path="/trainer/trainings" element={<MainForTrainerPortal />} />
+        {/* Tech Portal*/}
+        <Route path="/tech" element={<TechWelcome />} />
+        <Route path="/tech/machines" element={<Machines />} />
+        <Route path="/tech/addmachine" element={<AddMachine />} />
+        <Route path="/tech/devices" element={<Devices />} />
+        <Route path="/tech/adddevice" element={<AddDevices />} />
+
+
       </Routes>
     </div>
   );

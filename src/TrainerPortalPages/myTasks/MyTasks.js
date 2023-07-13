@@ -1,6 +1,5 @@
 import style from './Mytasks.module.css'
 import search from '../../assets/images/employees/Search.svg'
-import add from '../../assets/images/employees/Application Add.svg'
 import ProfileUser from '../../components/profileUser/ProfileUser'
 import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 import { useNavigate } from 'react-router-dom'

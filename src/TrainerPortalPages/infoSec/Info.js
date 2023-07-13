@@ -1,6 +1,5 @@
 import style from './Info.module.css'
 import ProfileUser from '../../components/profileUser/ProfileUser'
-import SideBar from '../../components/sidebar/SideBar'
 import clock from '../../assets/images/viewtrainings/Clock.svg'
 import star from '../../assets/images/viewtrainings/Star.svg'
 import mos from '../../assets/images/viewtrainings/mos.svg'

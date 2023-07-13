@@ -153,7 +153,7 @@ function AddEmployees() {
                         <div class={style.alert}>
                             <p class={style.msg}>Do you want to submit this information?</p>
                             <div className={style.alertbtns}>
-                                <button onClick={alertManager} className={style.btn1}>Submit</button>
+                                <button onClick={alertManager} className={style.btn1}>Initiate</button>
                                 <button onClick={alertManager} className={style.btn2}>Cencel</button>
                             </div>
                         </div>
