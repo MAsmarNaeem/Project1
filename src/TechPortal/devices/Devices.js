@@ -7,6 +7,7 @@ import { useState } from 'react'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import TechPortalSidebar from '../../components/sidebar/TechPortalSidebar'
+import TechOffcanvas from '../../components/offcanvas/TechOffcanvas'
 
 
 function Devices() {
@@ -51,7 +52,7 @@ function Devices() {
                         setOffcanvas(!offcanvas)
                     }} />
                     <TechPortalSidebar />
-                    <HROffcanvas status={offcanvas} />
+                    <TechOffcanvas status={offcanvas} />
                 </div>
                 <div className={style.subparent}>
                     <ProfileUser path='/hr/profile' />

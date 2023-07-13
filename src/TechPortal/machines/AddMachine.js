@@ -8,6 +8,7 @@ import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import settings from '../../assets/images/techPortal/settings.svg'
 import TechPortalSidebar from '../../components/sidebar/TechPortalSidebar'
+import TechOffcanvas from '../../components/offcanvas/TechOffcanvas'
 
 function AddMachine() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -30,7 +31,7 @@ function AddMachine() {
                         setOffcanvas(!offcanvas)
                     }} />
                     <TechPortalSidebar />
-                    <HROffcanvas status={offcanvas} />
+                    <TechOffcanvas status={offcanvas} />
                 </div>
                 <div className={style.addEmployee}>
                     <ProfileUser path='/hr/profile' />
