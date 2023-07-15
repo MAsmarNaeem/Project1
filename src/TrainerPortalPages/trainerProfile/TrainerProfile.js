@@ -10,6 +10,7 @@ import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 import Navbar from '../../components/navbar/Navbar'
 import Offcanvas from '../../components/offcanvas/Offcanvas'
 import { useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 
 function TrainerProfile() {
@@ -96,6 +97,7 @@ function TrainerProfile() {
                     </div>
                 </div>
             </div>
+            <BackBtn />
         </div>
     )
 }

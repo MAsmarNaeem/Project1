@@ -10,6 +10,7 @@ import ProfileUser from '../../components/profileUser/ProfileUser'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import { useRef, useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 
 function HRProfile() {
@@ -115,6 +116,7 @@ function HRProfile() {
                         </div>
                     </div>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

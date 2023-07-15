@@ -6,6 +6,7 @@ import date from '../../assets/images/employeeProfile/Calendar.svg'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import { useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 function ShowPersonalRec() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -134,6 +135,7 @@ Touring Employee Deaprtment' type="text" />
                         </div>
                     </div>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import { useState } from 'react'
+import Btns from '../../components/btns/Btns'
 function YearlyPlan() {
     const [offcanvas, setOffcanvas] = useState(false)
     let data = [
@@ -36,7 +37,7 @@ function YearlyPlan() {
                 <div className={style.searchbar}>
                     <div className={style.sec1}>
                         <img src={search} alt="" />
-                        <input type="text" placeholder='Search Employee by name or id' />
+                        <input type="text" placeholder='Search Year By Name' />
                     </div>
                     <div onClick={() => {
                         navigate('/hr/giveplan')
@@ -70,11 +71,7 @@ function YearlyPlan() {
                         }
                     </table>
                 </div>
-                <div className={style.next}>
-                    <button>
-                        {next}
-                    </button>
-                </div>
+                <Btns />
             </div>
         </div>
     )

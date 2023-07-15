@@ -50,7 +50,7 @@ function TrainingsRef() {
 
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Serial #</td>
+                            <td>Training ID</td>
                             <td>Training Name</td>
                             <td>Description</td>
                             <td>Evaluation Criteria </td>
@@ -60,7 +60,11 @@ function TrainingsRef() {
                             data.map((employee, i) => {
                                 return (
                                     <tr className={style.tablebody} key={i}>
-                                        <td className={style.simpleContent}>{i + 1}</td>
+                                        <td className={style.simpleContent}>
+                                            <p>
+                                                {i + 116}
+                                            </p>
+                                        </td>
                                         <td className={style.simpleContent}>{employee}</td>
                                         <td >
 

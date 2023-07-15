@@ -6,6 +6,7 @@ import date from '../../assets/images/employeeProfile/Calendar.svg'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import { useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 function PersonalRec() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -207,6 +208,7 @@ function PersonalRec() {
                 <div className={style.btn}>
                     <button>Submit</button>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

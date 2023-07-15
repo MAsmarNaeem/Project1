@@ -7,6 +7,8 @@ import ProfileUser from '../../components/profileUser/ProfileUser'
 import { useState } from 'react'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
+import Btns from '../../components/btns/Btns'
+import BackBtn from '../../components/btns/BackBtn'
 function Checked() {
     const [offcanvas, setOffcanvas] = useState(false)
     let data = [
@@ -111,11 +113,7 @@ function Checked() {
                         }
                     </table>
                 </div>
-                <div className={style.next}>
-                    <button>
-                        {next}
-                    </button>
-                </div>
+               <BackBtn />
             </div>
         </div>
     )

@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import Offcanvas from '../../components/offcanvas/Offcanvas'
+import BackBtn from '../../components/btns/BackBtn'
 
 function Info() {
     const [alert, setalert] = useState(false)
@@ -137,6 +138,7 @@ function Info() {
                         }} className={style.bottombtn}>Click Here</button>
 
                     </div>
+                    <BackBtn />
                 </div>
             </div>
             {

@@ -16,6 +16,7 @@ import ProfileUser from '../../components/profileUser/ProfileUser'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import { useNavigate } from 'react-router-dom'
+import BackBtn from '../../components/btns/BackBtn'
 
 
 function EmployeeProfile() {
@@ -189,6 +190,7 @@ function EmployeeProfile() {
                         </div>
                     </div>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

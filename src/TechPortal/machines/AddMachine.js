@@ -9,6 +9,7 @@ import Navbar from '../../components/navbar/Navbar'
 import settings from '../../assets/images/techPortal/settings.svg'
 import TechPortalSidebar from '../../components/sidebar/TechPortalSidebar'
 import TechOffcanvas from '../../components/offcanvas/TechOffcanvas'
+import BackBtn from '../../components/btns/BackBtn'
 
 function AddMachine() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -91,6 +92,7 @@ function AddMachine() {
                         </div>
 
                     </div>
+                    <BackBtn />
 
                 </div>
             </div>

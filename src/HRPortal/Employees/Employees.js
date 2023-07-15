@@ -26,11 +26,11 @@ function Employees() {
         sampledata,
         sampledata,
         sampledata,
-        sampledata,
-        sampledata,
-        sampledata,
-        sampledata,
-        sampledata,
+        // sampledata,
+        // sampledata,
+        // sampledata,
+        // sampledata,
+        // sampledata,
     ]
     let next = 'Next page >>'
 
@@ -66,7 +66,7 @@ function Employees() {
 
                     <table className={style.table}>
                         <tr className={style.headers}>
-                            <td>Employee Code</td>
+                            <td>Employee ID</td>
                             <td>Name</td>
                             <td>CNIC</td>
                             <td>Phone Number</td>
@@ -88,7 +88,7 @@ function Employees() {
                                         <td className={style.txtStyle4}>{employee.phonen}</td>
                                         <td className={style.txtStyle3}>{employee.email}</td>
                                         <td className={style.txtStyle4}>{employee.dep}</td>
-                                        <td className={style.txtStyle5}>{employee.status}</td>
+                                        <td className={employee.status === 'Trained' ? style.txtStyle5 : style.txtStyle6}>{employee.status}</td>
                                         <td>
                                             <button className={style.viewBtn} onClick={pushEmployeeProfile}>
                                                 View

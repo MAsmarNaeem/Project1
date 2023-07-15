@@ -9,6 +9,7 @@ import msg from '../../assets/images/hrprofile/mail.svg'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import { useRef, useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 function AddTrainer() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -93,6 +94,7 @@ function AddTrainer() {
                         />
                     </div>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

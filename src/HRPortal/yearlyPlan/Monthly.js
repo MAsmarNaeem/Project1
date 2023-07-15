@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
+import Btns from '../../components/btns/Btns'
 function Monthly() {
     const [offcanvas, setOffcanvas] = useState(false)
     const navigate = useNavigate()
@@ -63,11 +64,7 @@ function Monthly() {
                         }
                     </table>
                 </div>
-                <div className={style.next}>
-                    <button>
-                        {next}
-                    </button>
-                </div>
+                <Btns />
             </div>
         </div>
     )

@@ -31,7 +31,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: 12rem;
+  margin-top: 6rem;
   margin-bottom: 0.5rem;
   margin-left: 1.44rem;
 }
@@ -355,6 +355,11 @@ p {
   }
   .card2 {
     width: 50%;
+  }
+}
+@media (max-width: 750px) {
+  .profile > p:nth-child(2) {
+    margin-top: 12rem;
   }
 }
 @media (max-width: 1150px) {

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
+import BackBtn from '../../components/btns/BackBtn'
 
 function ShowAddPersom() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -133,6 +134,7 @@ function ShowAddPersom() {
                         navigate('/hr/showpersonalrec')
                     }}>Next Page</button>
                 </div>
+                    <BackBtn />
             </div>
         </div>
     )

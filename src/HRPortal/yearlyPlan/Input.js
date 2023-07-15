@@ -6,6 +6,8 @@ import Select from '../../components/select/Select'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import { useState } from 'react'
+import Btns from '../../components/btns/Btns'
+import BackBtn from '../../components/btns/BackBtn'
 
 function Input() {
 
@@ -100,11 +102,7 @@ function Input() {
                         }
                     </table>
                 </div>
-                <div className={style.next}>
-                    <button>
-                        {next}
-                    </button>
-                </div>
+                <BackBtn />
             </div>
         </div>
     )

@@ -11,6 +11,7 @@ import cnic from '../../assets/images/employeeProfile/UserCard.svg'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import { useState } from 'react'
+import BackBtn from '../../components/btns/BackBtn'
 
 function ViewTrainings() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -50,7 +51,7 @@ function ViewTrainings() {
                                 <img src={clock} alt="" />
                                 <div>
                                     <p className={style.card1para}>Time</p>
-                                    <p className={style.card1para2}>24-04-2023</p>
+                                    <input className={style.card1para2} placeholder='24-04-2023' type="time" />
                                 </div>
                             </div>
                             <div>
@@ -101,6 +102,7 @@ function ViewTrainings() {
                         </div>
                     </div>
                 </div>
+                <BackBtn />
             </div>
         </div >
     )

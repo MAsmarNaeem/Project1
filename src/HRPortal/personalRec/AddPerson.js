@@ -5,12 +5,20 @@ import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import { useState } from 'react'
+import arrow from '../../assets/images/addEmployee/arrow.svg'
+import BackBtn from '../../components/btns/BackBtn'
 
 function AddPerson() {
     const [offcanvas, setOffcanvas] = useState(false)
     const navigate = useNavigate()
     const showrec = () => {
         navigate('/hr/hiriningrec')
+    }
+    const [optvalue, setoptvalue] = useState('something')
+    const [dropd, setdropd] = useState(false)
+    const optManager = (e) => {
+        setdropd(!dropd)
+        setoptvalue(e)
     }
     return (
         <div className={style.parent}>
@@ -53,14 +61,23 @@ function AddPerson() {
                                     <input type="text" />
                                 </div>
                             </div>
-                            <div className={style.card1body}>
-                                <div className='d-flex justify-content-start align-items-start'>
-                                    <p className={style.paraincard}>Department</p>
-                                </div>
-                                <div className={style.inputp}>
-                                    <input type="text" />
+                            <div className={style.dropdown}>
+                            <p>Department</p>
+                            <div className={style.indicator2}>
+                                <p className={style.optStyle}>{optvalue}</p>
+                                <div onClick={() => optManager(optvalue)}>
+                                    <img className={dropd ? style.rotate : null} src={arrow} alt="" />
                                 </div>
                             </div>
+                            {dropd ?
+                                <div className={style.droper}>
+                                    <p className={style.optStyle} onClick={() => optManager('add opts')}>Add options</p>
+                                    <p className={style.optStyle} onClick={() => optManager('add opts')}>Add options</p>
+                                    <p className={style.optStyle} onClick={() => optManager('add opts')}>Add options</p>
+                                    <p className={style.optStyle} onClick={() => optManager('add opts')}>Add options</p>
+                                </div> : null
+                            }
+                        </div>
                             <div className={style.card1body}>
                                 <div className='d-flex justify-content-start align-items-start'>
                                     <p className={style.paraincard}>Section</p>
@@ -148,10 +165,10 @@ function AddPerson() {
                                 </div>
                                 <div className={style.card1body}>
                                     <div style={{ width: '70%', }} className='d-flex justify-content-start align-items-start'>
-                                        <p className={style.paraincard}>Next Salary</p>
+                                        <p className={style.paraincard}>Net Salary</p>
                                     </div>
                                     <div className={style.inputp}>
-                                        <input type="text" />
+                                        <input  type="text" />
                                     </div>
                                 </div>
                             </div>
@@ -178,6 +195,7 @@ function AddPerson() {
                 <div className={style.btn}>
                     <button onClick={showrec}>Next Page</button>
                 </div>
+                <BackBtn />
             </div>
         </div>
     )

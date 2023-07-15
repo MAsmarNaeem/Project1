@@ -77,7 +77,7 @@
 .tableParent {
   overflow: scroll;
   width: 93%;
-  max-height: 620px;
+  height: 620px;
   margin: auto;
   margin-top: 13px;
   margin-left: 18px;
@@ -210,8 +210,16 @@
   font-weight: 400;
   line-height: 20px;
 }
+.txtStyle6 {
+  color: #f00;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
 .txtStyle5 {
-  color: var(--foundation-blue-b-200, #6b788e);
+  color: #62c554;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;

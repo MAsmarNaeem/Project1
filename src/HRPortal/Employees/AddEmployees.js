@@ -15,6 +15,7 @@ import { useRef, useState } from 'react'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
 import Calendar from '../../assets/images/employeeProfile/Calendar.svg'
+import BackBtn from '../../components/btns/BackBtn'
 
 function AddEmployees() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -142,9 +143,8 @@ function AddEmployees() {
                             />
                             <button className={style.submit} onClick={alertManager}>Submit</button>
                         </div>
-
                     </div>
-
+                    <BackBtn />
                 </div>
             </div>
             {

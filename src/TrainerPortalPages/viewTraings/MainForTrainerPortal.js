@@ -7,6 +7,7 @@ import SidebarForTrainerpor from '../../components/sidebar/SidebarForTrainerpor'
 import Navbar from '../../components/navbar/Navbar'
 import Offcanvas from '../../components/offcanvas/Offcanvas'
 import { useState } from 'react'
+import Btns from '../../components/btns/Btns'
 
 
 function MainForTrainerPortal() {
@@ -96,11 +97,7 @@ function MainForTrainerPortal() {
                         }
                     </table>
                 </div>
-                <div className={style.next}>
-                    <button>
-                        {next}
-                    </button>
-                </div>
+                <Btns />
             </div>
         </div>
     )

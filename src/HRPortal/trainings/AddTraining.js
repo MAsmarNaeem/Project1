@@ -7,6 +7,7 @@ import ProfileUser from '../../components/profileUser/ProfileUser'
 import { useState } from 'react'
 import HROffcanvas from '../../components/offcanvas/HROffcanvas'
 import Navbar from '../../components/navbar/Navbar'
+import BackBtn from '../../components/btns/BackBtn'
 
 function AddTraining() {
     const [offcanvas, setOffcanvas] = useState(false)
@@ -25,7 +26,7 @@ function AddTraining() {
                     <HROffcanvas status={offcanvas} />
                     <SideBar />
                 </div>
-                <ProfileUser path='/hr/profile'/>
+                <ProfileUser path='/hr/profile' />
                 <div className={style.form}>
                     <div className={style.headers}>
                         <div className={style.spans}>
@@ -67,6 +68,7 @@ function AddTraining() {
                     </div>
                 </div>
             </div>
+            <BackBtn />
             {
                 alert ?
                     <div class={style.alertparent}>
